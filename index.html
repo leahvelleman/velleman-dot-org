@@ -1,4 +1,21 @@
 ---
 layout: default
-title: Home
 ---
+<h1>Posts</h1>
+
+        {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %} 
+        <dl>
+        {% for year in postsByYear %}
+          <dt style="position: absolute; width: 8vw; left: -9vw; text-align: right; color: #727272; font-weight: normal;">{{ year.name }}</dt>
+          {% for post in year.items %}
+          <dd style="margin: 0vw;"><a href="{{ post.url }}">{{ post.title }}</a></dd>
+          {% endfor %}
+        {% endfor %}
+        </dl>
+
+<h1>Projects</h1>
+        <dl>
+        {% for project in site.projects %}
+        <dd style="margin: 0vw;"><a href="{{ project.url }}">{{ project.title }}</a> — {{ project.tagline }}</dd>
+        {% endfor %}
+        </dl>

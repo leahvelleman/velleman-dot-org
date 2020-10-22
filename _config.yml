@@ -19,18 +19,35 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Leah Velleman
-email: your-email@example.com
+email: leahvelleman@gmail.com
 description: Developer, linguist, documentation nerd
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: http://www.velleman.org/ # the base hostname & protocol for your site, e.g. http://example.com
 show_downloads: false
-twitter_username: jekyllrb
-github_username:  jekyll
+logo: assets/laceautomata_neighborhood.png
+social:
+    name: Leah Velleman
+    links:
+        - https://twitter.com/leahvelleman
+        - https://github.com/leahvelleman
 
 # Build settings
-theme: jekyll-theme-minimal
+permalink: /:slug.html
+# theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-lilypond-converter
+
+twitter:
+    username: leahvelleman
+    card: summary
+
+collections:
+    projects:
+        output: true
+
+iis_slider_array: []
 
 # Exclude from processing.
 # The following items will not be processed, by default.

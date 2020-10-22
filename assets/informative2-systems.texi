@@ -1,0 +1,2 @@
+@image{informative2-1}
+@c eof
