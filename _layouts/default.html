@@ -25,7 +25,7 @@
   <body>
     <div class="wrapper">
       <header style="background: rgba(255, 255, 255, 0.9); padding: 1rem;">
-        <h1><a href="{{ "/" | absolute_url }}">Mx. {{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1><a href="{% link index.html %}">Mx. {{ site.title | default: site.github.repository_name }}</a></h1>
         <p>Coder, linguist, singer, occasional blogger. Here's <a href="/index.html">my posts and projects</a>.</p>
         <p>Or see my <a href="{{ site.github.owner_url }}">Github profile</a>, my <a href="/assets/velleman_resume.pdf">résumé</a>
         and <a href="/resume.html">how I build it</a>, and <a href="{{ site.baseurl }} {% link mx.md %}">why I use Mx.</a>

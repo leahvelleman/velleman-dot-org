@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Why my title is Mx.
-permalink: /mx
+permalink: /mx.html
 ---
 
 # My title is Mx.
