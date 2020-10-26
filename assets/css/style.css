@@ -175,6 +175,8 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
 
 footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-smoothing: subpixel-antialiased; }
 
+.active { font-weight: 700; }
+
 .tooltip { color: #396; }
 
 .tooltiptext { visibility: hidden; position: fixed; left: 70px; top: 300px; width: 270px; margin: -18px; padding: 18px; background-color: #DFE; }
