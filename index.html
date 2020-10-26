@@ -1,17 +1,48 @@
 ---
 layout: default
 ---
-<h1>Posts</h1>
 
-        {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %} 
-        <dl>
-        {% for year in postsByYear %}
-          <dt style="position: absolute; width: 8vw; left: -9vw; text-align: right; color: #727272; font-weight: normal;">{{ year.name }}</dt>
-          {% for post in year.items %}
-          <dd style="margin: 0vw;"><a href="{{ post.url }}">{{ post.title }}</a></dd>
-          {% endfor %}
+<h1>Posts</h1>
+{% assign series_shown = "" | split: "|" %}
+{% assign newness = 10000000 %}
+
+      <ul class="navlist">
+        {% for post in site.posts %}
+          {% if post.series %}
+            {% unless series_shown contains post.series %}
+              {% assign series_shown = series_shown | push: post.series %}
+              {% assign series = site.data.series | where: "id", post.series | first %}
+              <li>
+                Series on <em>{{ series.topic }}</em>
+                {% assign reverse_posts = site.posts | reverse %}
+                {% for other in reverse_posts %}
+                  {% if other.series == post.series %}
+                    {% assign poststamp = other.date | date: '%s' | plus: 0 %}
+                    {% assign nowstamp = 'now' | date: '%s' %}
+                    {% assign thenstamp = nowstamp | minus: newness %}
+                    —
+                    {% if poststamp > thenstamp %}
+                        <strong>New</strong>
+                    {% endif %}
+                    <a href="{{ other.url }}">{{ other.title }}</a>
+                  {% endif %} 
+                {% endfor %}
+              </li>
+            {% endunless %}
+          {% else %}
+          {% assign poststamp = post.date | date: '%s' | plus: 0 %}
+          {% assign nowstamp = 'now' | date: '%s' %}
+          {% assign thenstamp = nowstamp | minus: newness %}
+          <li>
+              {% if poststamp > thenstamp %}
+                        <strong>New</strong>
+                    {% endif %}
+
+              <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+          </li>
         {% endfor %}
-        </dl>
+       </ul>
 
 <h1>Projects</h1>
         <dl>

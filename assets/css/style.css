@@ -147,6 +147,10 @@ a:hover, a:focus { color: #369; text-decoration: underline;}
 .admonition { padding: 18px; margin: 18px; background-color: #DEF;
 }
 
+.navlist { list-style: none; padding-left: 0; }
+
+.navlist li { margin-bottom: 1ex; }
+
 blockquote { border-left: 1px solid #e5e5e5; margin: 0; padding: 0 0 0 20px; }
 
 code, pre { font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace; color: #333; }
