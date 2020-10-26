@@ -2,7 +2,7 @@
 layout: post
 ---
 
-LilyPond understands note names in a lot of different languages:
+LilyPond understands note names in a lot of different languages. This code
 
     \include "english.ly"
     \relative c' { c d e f g a bf b c }
@@ -11,19 +11,15 @@ LilyPond understands note names in a lot of different languages:
 \relative c' { c d e f g a bes b c }
 ```
 
+could also be written as
+
     \include "nederlands.ly"
     \relative c' { c d e f g a bes b c }
 
-```lilypond
-\relative c' { c d e f g a bes b c }
-```
+or as:
 
     \include "espanol.ly"
     \relative do' { do re mi fa sol la sib si do }
-
-```lilypond
-\relative c' { c d e f g a bes b c }
-```
 
 The note names in Spanish (and other Romance languages) look like the
 solfège syllables that are familiar, if nothing else, from The Sound Of
@@ -81,64 +77,72 @@ should also transpose the music so that <span
 class="title-ref">do</span> is the first note of the major scale in that
 key signature.:
 
-    relative-do =
-      #(define-music-function (parser location k m) ; take two real arguments: k and m.
-                              (ly:pitch? ly:music?) ; k should be a pitch, m should be some music
-        #{\key $k \major                            % set the key to k
-          \transpose do $k { \relative $k { $m } }  % and transpose the music so that "do" is k
+```scheme
+relative-do =
+    ; take two real arguments: k and m.
+    ; k should be a pitch, m should be some music
+    #(define-music-function (parser location k m) 
+                            (ly:pitch? ly:music?) 
+        % set the key to k
+        % and transpose the music so that "do" is k
+        #{\key $k \major                            
+          \transpose do $k { \relative $k { $m } }  
         #}
-      )
+    )
+```
 
 All that remains after that is to teach LilyPond the names of the notes.
 I've chosen to give it *both* the English note names *and* their most
 common names in movable-do solfège:
 
-    relativeDoPitchNames = #`(
-      (cf . ,(ly:make-pitch -1 0 FLAT))
-      (c  . ,(ly:make-pitch -1 0 NATURAL))
-      (cs . ,(ly:make-pitch -1 0 SHARP))
-      (df . ,(ly:make-pitch -1 1 FLAT))
-      (d  . ,(ly:make-pitch -1 1 NATURAL))
-      (ds . ,(ly:make-pitch -1 1 SHARP))
-      (ef . ,(ly:make-pitch -1 2 FLAT))
-      (e  . ,(ly:make-pitch -1 2 NATURAL))
-      (es . ,(ly:make-pitch -1 2 SHARP))
-      (ff . ,(ly:make-pitch -1 3 FLAT))
-      (f  . ,(ly:make-pitch -1 3 NATURAL))
-      (fs . ,(ly:make-pitch -1 3 SHARP))
-      (gf . ,(ly:make-pitch -1 4 FLAT))
-      (g  . ,(ly:make-pitch -1 4 NATURAL))
-      (gs . ,(ly:make-pitch -1 4 SHARP))
-      (af . ,(ly:make-pitch -1 5 FLAT))
-      (a  . ,(ly:make-pitch -1 5 NATURAL))
-      (as . ,(ly:make-pitch -1 5 SHARP))
-      (bf . ,(ly:make-pitch -1 6 FLAT))
-      (b  . ,(ly:make-pitch -1 6 NATURAL))
-      (bs . ,(ly:make-pitch -1 6 SHARP))
-      (do . ,(ly:make-pitch -1 0 NATURAL))
-      (di . ,(ly:make-pitch -1 0 SHARP))
-      (ra . ,(ly:make-pitch -1 1 FLAT))
-      (re . ,(ly:make-pitch -1 1 NATURAL))
-      (ri . ,(ly:make-pitch -1 1 SHARP))
-      (ma . ,(ly:make-pitch -1 2 FLAT))
-      (me . ,(ly:make-pitch -1 2 FLAT))
-      (mi . ,(ly:make-pitch -1 2 NATURAL))
-      (fa . ,(ly:make-pitch -1 3 NATURAL))
-      (fi . ,(ly:make-pitch -1 3 SHARP))
-      (se . ,(ly:make-pitch -1 4 FLAT))
-      (so . ,(ly:make-pitch -1 4 NATURAL))
-      (si . ,(ly:make-pitch -1 4 SHARP))
-      (le . ,(ly:make-pitch -1 5 FLAT))
-      (le . ,(ly:make-pitch -1 5 FLAT))
-      (lo . ,(ly:make-pitch -1 5 FLAT))
-      (la . ,(ly:make-pitch -1 5 NATURAL))
-      (li . ,(ly:make-pitch -1 5 SHARP))
-      (ta . ,(ly:make-pitch -1 6 FLAT))
-      (te . ,(ly:make-pitch -1 6 FLAT))
-      (ti . ,(ly:make-pitch -1 6 NATURAL))
-    )
-    pitchnames = \relativeDoPitchNames
-    #(ly:parser-set-note-names parser relativeDoPitchNames)
+```scheme
+relativeDoPitchNames = #`(
+  (cf . ,(ly:make-pitch -1 0 FLAT))
+  (c  . ,(ly:make-pitch -1 0 NATURAL))
+  (cs . ,(ly:make-pitch -1 0 SHARP))
+  (df . ,(ly:make-pitch -1 1 FLAT))
+  (d  . ,(ly:make-pitch -1 1 NATURAL))
+  (ds . ,(ly:make-pitch -1 1 SHARP))
+  (ef . ,(ly:make-pitch -1 2 FLAT))
+  (e  . ,(ly:make-pitch -1 2 NATURAL))
+  (es . ,(ly:make-pitch -1 2 SHARP))
+  (ff . ,(ly:make-pitch -1 3 FLAT))
+  (f  . ,(ly:make-pitch -1 3 NATURAL))
+  (fs . ,(ly:make-pitch -1 3 SHARP))
+  (gf . ,(ly:make-pitch -1 4 FLAT))
+  (g  . ,(ly:make-pitch -1 4 NATURAL))
+  (gs . ,(ly:make-pitch -1 4 SHARP))
+  (af . ,(ly:make-pitch -1 5 FLAT))
+  (a  . ,(ly:make-pitch -1 5 NATURAL))
+  (as . ,(ly:make-pitch -1 5 SHARP))
+  (bf . ,(ly:make-pitch -1 6 FLAT))
+  (b  . ,(ly:make-pitch -1 6 NATURAL))
+  (bs . ,(ly:make-pitch -1 6 SHARP))
+  (do . ,(ly:make-pitch -1 0 NATURAL))
+  (di . ,(ly:make-pitch -1 0 SHARP))
+  (ra . ,(ly:make-pitch -1 1 FLAT))
+  (re . ,(ly:make-pitch -1 1 NATURAL))
+  (ri . ,(ly:make-pitch -1 1 SHARP))
+  (ma . ,(ly:make-pitch -1 2 FLAT))
+  (me . ,(ly:make-pitch -1 2 FLAT))
+  (mi . ,(ly:make-pitch -1 2 NATURAL))
+  (fa . ,(ly:make-pitch -1 3 NATURAL))
+  (fi . ,(ly:make-pitch -1 3 SHARP))
+  (se . ,(ly:make-pitch -1 4 FLAT))
+  (so . ,(ly:make-pitch -1 4 NATURAL))
+  (si . ,(ly:make-pitch -1 4 SHARP))
+  (le . ,(ly:make-pitch -1 5 FLAT))
+  (le . ,(ly:make-pitch -1 5 FLAT))
+  (lo . ,(ly:make-pitch -1 5 FLAT))
+  (la . ,(ly:make-pitch -1 5 NATURAL))
+  (li . ,(ly:make-pitch -1 5 SHARP))
+  (ta . ,(ly:make-pitch -1 6 FLAT))
+  (te . ,(ly:make-pitch -1 6 FLAT))
+  (ti . ,(ly:make-pitch -1 6 NATURAL))
+)
+pitchnames = \relativeDoPitchNames
+#(ly:parser-set-note-names parser relativeDoPitchNames)
+```
 
 With that code, we can write a major scale in any key as the familiar
 <span class="title-ref">do re mi fa so la ti do</span>, and all we have
