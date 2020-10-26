@@ -39,12 +39,19 @@ plugins:
   - jekyll-seo-tag
   - jekyll-lilypond-converter
 
+lilypond-image-format: png
+
 twitter:
     username: leahvelleman
     card: summary
 
+github:
+    owner_url: https://github.com/leahvelleman/
+
 collections:
     projects:
+        output: true
+    mixes:
         output: true
 
 iis_slider_array: []
