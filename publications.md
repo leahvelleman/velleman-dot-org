@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Publications
-permalink: /elsewhere.html
+permalink: /publications.html
 ---
 
 ## Pop science
