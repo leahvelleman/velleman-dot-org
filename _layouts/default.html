@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Slider CSS -->
-    <link rel="stylesheet" href="{{ "/bower_components/ideal-image-slider/ideal-image-slider.css" | relative_url }}">
-
+    {% feed_meta %}
     {% seo %}
+    <link rel="stylesheet" href="{{ "/bower_components/ideal-image-slider/ideal-image-slider.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
     <script>
@@ -24,18 +27,22 @@
   </head>
   <body>
     <div class="wrapper">
-      <header style="background: rgba(255, 255, 255, 0.9); padding: 1rem;">
+      <header>
         <h1><a href="{% link index.html %}">Mx. {{ site.title | default: site.github.repository_name }}</a></h1>
-        <p>Coder, linguist, singer, occasional blogger. Here's <a href="/index.html">my posts and projects</a>.</p>
-        <p>Or see my <a href="{{ site.github.owner_url }}">Github profile</a>, my <a href="/assets/velleman_resume.pdf">résumé</a>
-        and <a href="/resume.html">how I build it</a>, and <a href="{{ site.baseurl }} {% link mx.md %}">why I use Mx.</a>
+        <p>Coder, linguist, singer, occasional blogger.</p>
+          <ul class="navlist">
+              <li><a href="{{ site.baseurl }}">All posts and projects</a></li>
+              <li><a href="{{ site.github.owner_url }}">Github profile</a></li>
+              <li><a href="{% link publications.md %}">Publications</a></li>
+              <li>My <a href="/assets/velleman_resume.pdf">résumé</a> 
+                  and <a href="/resume.html">how I build it</a></li>
+              <li><a href="{{ site.baseurl }} {% link mx.md %}">Why I use Mx.</a></p></li>
       </header>
-      <section style="background: rgba(255, 255, 255, 0.9); padding: 1rem;">
-
-      {{ content }}
-
+      <section>
+        {{ content }}
       </section>
       <footer>
+        <a href="{% link feed.xml %}">Subscribe</a> | <a href="mailto:leahvelleman@gmail.com">Email</a> | <a href="{% link elsewhere.md %}">Elsewhere</a> 
       </footer>
     </div>
   </body>

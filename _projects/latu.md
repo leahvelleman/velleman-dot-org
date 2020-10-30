@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: page
+title: The Latu language
 tagline: An experiment — Building a grammar sketch for a conlang-in-progress with Jinja, Python, and Markdown.
 permalink: latu.html
 ---
 
-# *Kitsani Latu’* / The Latu language
 
 This is a conlang-in-progress, and a test of using static site generation 
 tools to build a grammar sketch. [Here's a quick word about the technical

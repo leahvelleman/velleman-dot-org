@@ -178,52 +178,63 @@ instance, the rule we represented graphically as follows
 
 is, in our Python representation:
 
-    RULE = { 0b000 : 0b000,
-             0b001 : 0b110,
-             0b010 : 0b111,
-             0b011 : 0b001,
-             0b100 : 0b011,
-             0b101 : 0b010,
-             0b110 : 0b100,
-             0b111 : 0b000 }
+```python
+RULE = { 0b000 : 0b000,
+         0b001 : 0b110,
+         0b010 : 0b111,
+         0b011 : 0b001,
+         0b100 : 0b011,
+         0b101 : 0b010,
+         0b110 : 0b100,
+         0b111 : 0b000 }
+```
 
 If states are three-bit numbers, then a row of automaton output is a
 list of such numbers, and the full output will be a list of rows. Given
 a specified width, we'll populate the first row by hand, and then enter
 a loop where we calculate new rows until we reach a specified height. :
 
-    WIDTH = 200
-    HEIGHT = 100
-    rows = [[0b000]*(WIDTH//2) + [0b010] + [0b000]*(WIDTH//2)]
+```python
+WIDTH = 200
+HEIGHT = 100
+rows = [[0b000]*(WIDTH//2) + 
+        [0b010] + 
+        [0b000]*(WIDTH//2)]
 
-    for i in range(HEIGHT):
-        rows.append(apply_rule(get_neighborhoods(rows[-1])))
+for i in range(HEIGHT):
+    rows.append(apply_rule(get_neighborhoods(rows[-1])))
+```
 
 To flesh out this skeleton of a program we need two more things: an
-<span class="title-ref">apply\_rule</span> function and a <span
-class="title-ref">get\_neighborhoods</span> function.
+`apply_rule` function and a `get_neighborhoods` function.
 
 Actually applying the rule is easy. If we're given a list of
 neighborhoods, we just look each one up in the mapping we've already
 defined :
 
-    def apply_rule(neighborhoods):
-        return [RULE[n] for n in neighborhoods]
+```python
+def apply_rule(neighborhoods):
+    return [RULE[n] for n in neighborhoods]
+```
 
 The tricky part turns out to be getting the neighborhoods. Let's start
 with a function that looks up just one cell's neighborhood. We give it a
-list of cell states and a number <span class="title-ref">i</span>, and
-it looks up the neighborhood for the <span class="title-ref">i</span>th
+list of cell states and a number `i`, and
+it looks up the neighborhood for the `i`th
 cell.
 
-    def get_neighborhood(row, i):
-        # First, get the complete state of each neighbor.
-        left = row[(i-1) % WIDTH]
-        mid = row[i]
-        right = row[(i+1) % WIDTH]
-        # Then, keep only the information we'll use:
-        out = ((left & 0b001) << 2) | (mid & 0b010) | ((right & 0b100) >> 2)
-        return out
+```python
+def get_neighborhood(row, i):
+    # First, get the complete state of each neighbor.
+    left = row[(i-1) % WIDTH]
+    mid = row[i]
+    right = row[(i+1) % WIDTH]
+    # Then, keep only the information we'll use:
+    out = (((left & 0b001) << 2) | 
+             (mid & 0b010) | 
+             ((right & 0b100) >> 2))
+    return out
+```
 
 That last line is worth a closer look. `(left & 0b001)` gets only the
 low bit of `left`; and `(left & 0b001) << 2` says "Take the low bit of
@@ -236,51 +247,59 @@ comes to me in the middle," and "If a line leaves my rightward neighbor
 heading left, it comes to me from the right."
 
 Once we can get a neighborhood for one cell, we can do it for a whole
-row of cells. :
+row of cells. 
 
-    def get_neighborhoods(prev):
-        return [get_neighborhood(prev, i) for i in range(len(prev))]
+```python
+def get_neighborhoods(prev):
+    return [get_neighborhood(prev, i) 
+            for i in range(len(prev))]
+```
 
-Now we're done calculating: we've supplied the <span
-class="title-ref">apply\_rule</span> and <span
-class="title-ref">get\_neighborhoods</span> functions needed to create
-new generations of output. But our output looks like this:
+Now we're done calculating: we've supplied the `apply_rule` and
+`get_neighborhoods` functions needed to create new generations of output. But
+our output looks like this:
 
-    [0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0]
-    [0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0]
-    [0, 0, 0, 0, 7, 0, 3, 0, 0, 0, 0]
-    [0, 0, 0, 7, 5, 3, 5, 3, 0, 0, 0]
-    [0, 0, 7, 7, 3, 2, 3, 2, 3, 0, 0]
-    [0, 7, 7, 2, 2, 2, 5, 2, 5, 3, 0]
+```python
+[0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 7, 0, 3, 0, 0, 0, 0]
+[0, 0, 0, 7, 5, 3, 5, 3, 0, 0, 0]
+[0, 0, 7, 7, 3, 2, 3, 2, 3, 0, 0]
+[0, 7, 7, 2, 2, 2, 5, 2, 5, 3, 0]
+```
 
-With a little more code, we can output images instead of lists. :
+With a little more code, we can output images instead of lists. 
 
-    import cairo
-    SCALE = 5
-    surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, WIDTH*SCALE, HEIGHT*SCALE)
-    ctx = cairo.Context(surface)
-    ctx.scale(SCALE, SCALE)
-    ctx.set_line_width(0.1)
+```python
+import cairo
+SCALE = 5
+surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 
+                             WIDTH*SCALE, 
+                             HEIGHT*SCALE)
+ctx = cairo.Context(surface)
+ctx.scale(SCALE, SCALE)
+ctx.set_line_width(0.1)
 
-    for row in rows:
-        print(row)
+for row in rows:
+    print(row)
 
-    for y, row in enumerate(rows):
-        for x, cell in enumerate(row):
-            if cell & 0b100:
-                ctx.move_to(x,y)
-                ctx.line_to(x-1,y+1)
-                ctx.stroke()
-            if cell & 0b010:
-                ctx.move_to(x,y)
-                ctx.line_to(x,y+1)
-                ctx.stroke()
-            if cell & 0b001:
-                ctx.move_to(x,y)
-                ctx.line_to(x+1,y+1)
-                ctx.stroke()
+for y, row in enumerate(rows):
+    for x, cell in enumerate(row):
+        if cell & 0b100:
+            ctx.move_to(x,y)
+            ctx.line_to(x-1,y+1)
+            ctx.stroke()
+        if cell & 0b010:
+            ctx.move_to(x,y)
+            ctx.line_to(x,y+1)
+            ctx.stroke()
+        if cell & 0b001:
+            ctx.move_to(x,y)
+            ctx.line_to(x+1,y+1)
+            ctx.stroke()
 
-    surface.write_to_png("test.png")
+surface.write_to_png("test.png")
+```
 
 And here is the result!
 

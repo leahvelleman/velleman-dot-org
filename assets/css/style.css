@@ -1,7 +1,13 @@
-@font-face { font-family: 'Noto Sans'; font-weight: 400; font-style: normal; src: url("../fonts/Noto-Sans-regular/Noto-Sans-regular.eot"); src: url("../fonts/Noto-Sans-regular/Noto-Sans-regular.eot?#iefix") format("embedded-opentype"), local("Noto Sans"), local("Noto-Sans-regular"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.woff2") format("woff2"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.woff") format("woff"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.ttf") format("truetype"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.svg#NotoSans") format("svg"); }
-@font-face { font-family: 'Noto Sans'; font-weight: 700; font-style: normal; src: url("../fonts/Noto-Sans-700/Noto-Sans-700.eot"); src: url("../fonts/Noto-Sans-700/Noto-Sans-700.eot?#iefix") format("embedded-opentype"), local("Noto Sans Bold"), local("Noto-Sans-700"), url("../fonts/Noto-Sans-700/Noto-Sans-700.woff2") format("woff2"), url("../fonts/Noto-Sans-700/Noto-Sans-700.woff") format("woff"), url("../fonts/Noto-Sans-700/Noto-Sans-700.ttf") format("truetype"), url("../fonts/Noto-Sans-700/Noto-Sans-700.svg#NotoSans") format("svg"); }
-@font-face { font-family: 'Noto Sans'; font-weight: 400; font-style: italic; src: url("../fonts/Noto-Sans-italic/Noto-Sans-italic.eot"); src: url("../fonts/Noto-Sans-italic/Noto-Sans-italic.eot?#iefix") format("embedded-opentype"), local("Noto Sans Italic"), local("Noto-Sans-italic"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2") format("woff2"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.woff") format("woff"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.ttf") format("truetype"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.svg#NotoSans") format("svg"); }
-@font-face { font-family: 'Noto Sans'; font-weight: 700; font-style: italic; src: url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot"); src: url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot?#iefix") format("embedded-opentype"), local("Noto Sans Bold Italic"), local("Noto-Sans-700italic"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2") format("woff2"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff") format("woff"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf") format("truetype"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans") format("svg"); }
+:root {
+    --cyan: #009999;
+    --blue: #267CB9;
+    --lightcyan: #DDF8ED;
+    --lightblue: #DDEDF8;
+    --solarized1: #fdf6e3;
+    --solarized2: #eee8d5;
+    --linkhover: #006699;
+}
+
 .highlight table td { padding: 5px; }
 
 .highlight table pre { margin: 0; }
@@ -52,17 +58,17 @@
 
 .highlight .k, .highlight .kv { color: #000000; font-weight: bold; }
 
-.highlight .mf { color: #009999; }
+.highlight .mf { color: var(--cyan); }
 
-.highlight .mh { color: #009999; }
+.highlight .mh { color: var(--cyan); }
 
-.highlight .il { color: #009999; }
+.highlight .il { color: var(--cyan); }
 
-.highlight .mi { color: #009999; }
+.highlight .mi { color: var(--cyan); }
 
-.highlight .mo { color: #009999; }
+.highlight .mo { color: var(--cyan); }
 
-.highlight .m, .highlight .mb, .highlight .mx { color: #009999; }
+.highlight .m, .highlight .mb, .highlight .mx { color: var(--cyan); }
 
 .highlight .sb { color: #d14; }
 
@@ -126,26 +132,25 @@
 
 .highlight .w { color: #bbbbbb; }
 
-.highlight { background-color: #f8f8f8; }
+body { background-color: #fff; padding: 50px; font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; color: #555; font-weight: 400; }
 
-body { background-color: #fff; padding: 50px; font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #555; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 { color: #333; margin: 0 0 18px; }
 
-h1, h2, h3, h4, h5, h6 { color: #333; margin: 0 0 20px; }
-
-p, ul, ol, table, pre, dl { margin: 0 0 20px; }
+p, ul, ol, table, dl, div.admonition, div.highlight, svg { margin: 0 0 18px; }
 
 h1, h2, h3 { line-height: 1.1; }
 
 h1 { font-size: 28px; }
 
-a { color: #267CB9; text-decoration: none; }
+hr { border: none; }
 
-a:hover, a:focus { color: #369; text-decoration: underline;}
+hr::before { content: "❦"; display: block; text-align: center; }
+
+a { color: var(--blue); text-decoration: none; }
+
+a:hover, a:focus { color: var(--linkhover); text-decoration: underline;}
 
 .wrapper { width: 860px; left: 0; }
-
-.admonition { padding: 18px; margin: 18px; background-color: #DEF;
-}
 
 .navlist { list-style: none; padding-left: 0; }
 
@@ -155,7 +160,19 @@ blockquote { border-left: 1px solid #e5e5e5; margin: 0; padding: 0 0 0 20px; }
 
 code, pre { font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace; color: #333; }
 
-pre { padding: 8px 15px; background: #f8f8f8; border-radius: 5px; border: 1px solid #e5e5e5; overflow-x: auto; font-size: 14px; }
+pre { font-size: 12px; }
+
+img { max-width: 484px; padding: 8px 8px }
+
+pre, img[alt=Music], div.admonition, div.highlight, div.admonition h4, div.admonition p { padding: 8px 8px; width: auto; overflow-x: auto; border-radius: 18px; max-width: 484px;}
+
+pre, div.admonition h4, div.admonition p { margin: 0; }
+
+pre, img[alt=Music], .highlight { background-color: #fdf6e3; }
+
+.admonition { background-color: var(--lightblue); }
+
+.meta { color: #999; }
 
 table { width: 100%; border-collapse: collapse; }
 
@@ -165,8 +182,6 @@ dt { color: #333; font-weight: 700; }
 
 th { color: #333; }
 
-img { max-width: 100%; }
-
 header { width: 270px; float: left; position: fixed; -webkit-font-smoothing: subpixel-antialiased; }
 
 strong, b, .tooltip { color: #333; font-weight: 700; }
@@ -175,15 +190,13 @@ section { width: 500px; float: right; padding-bottom: 50px; }
 
 small { font-size: 11px; }
 
-hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
-
 footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-smoothing: subpixel-antialiased; }
 
 .active { font-weight: 700; }
 
-.tooltip { color: #396; }
+.tooltip { color: var(--cyan); }
 
-.tooltiptext { visibility: hidden; position: fixed; left: 70px; top: 300px; width: 270px; margin: -18px; padding: 18px; background-color: #DFE; }
+.tooltiptext { visibility: hidden; position: fixed; left: 70px; top: 300px; width: 270px; margin: -18px; padding: 18px; background-color: var(--lightcyan); }
 
 .tooltip:hover { text-decoration: underline; }
 
@@ -192,6 +205,14 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
 .tooltipline::after { content: "\a"; white-space: pre; }
 
 .lexentry { margin-top: 1ex; border-top: 1px solid #bdc; }
+
+.lightblue { fill: var(--lightblue); }
+
+.lightcyan{ fill: var(--lightcyan); }
+
+.solarized1{ fill: var(--solarized1); }
+
+.solarized2{ fill: var(--solarized2); }
 
 @media only screen and (max-width: 500px) {
   .tooltiptext {
@@ -215,17 +236,12 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
 
 @media print, screen and (max-width: 960px) { div.wrapper { width: auto; margin: 0; }
   header, section, footer { float: none; position: static; width: auto; }
-  header { padding-right: 320px; }
-  section { border: 1px solid #e5e5e5; border-width: 1px 0; padding: 20px 0; margin: 0 0 20px; }
+  section { padding: 20px 0; margin: 0 0 20px; }
   header a small { display: inline; }
-  header ul { position: absolute; right: 50px; top: 52px; } }
+  header ul li { display: inline-block; margin-right: 1em; }
 @media print, screen and (max-width: 720px) { body { word-wrap: break-word; }
   header { padding: 0; }
-  header ul, header p.view { position: static; }
   pre, code { word-wrap: normal; } }
-@media print, screen and (max-width: 480px) { body { padding: 15px; }
-  header ul { width: 99%; }
-  header li, header ul li + li + li { width: 33%; } }
 @media print { body { padding: 0.4in; font-size: 12pt; color: #444; } }
 
 

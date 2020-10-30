@@ -38,8 +38,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-lilypond-converter
+  - jekyll-tidy
 
-lilypond-image-format: png
+lilypond-image-format: svg
 
 twitter:
     username: leahvelleman
