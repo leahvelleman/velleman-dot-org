@@ -5,48 +5,49 @@ layout: default
 <h1>Posts</h1>
 {% assign series_shown = "" | split: "|" %}
 {% assign newness = 10000000 %}
-
-      <ul class="navlist">
-        {% for post in site.posts %}
-          {% if post.series %}
-            {% unless series_shown contains post.series %}
-              {% assign series_shown = series_shown | push: post.series %}
-              {% assign series = site.data.series | where: "id", post.series | first %}
-              <li>
-                Series on <em>{{ series.topic }}</em>
-                {% assign reverse_posts = site.posts | reverse %}
-                {% for other in reverse_posts %}
-                  {% if other.series == post.series %}
-                    {% assign poststamp = other.date | date: '%s' | plus: 0 %}
-                    {% assign nowstamp = 'now' | date: '%s' %}
-                    {% assign thenstamp = nowstamp | minus: newness %}
-                    —
-                    {% if poststamp > thenstamp %}
-                        <strong>New</strong>
-                    {% endif %}
-                    <a href="{{ other.url }}">{{ other.title }}</a>
-                  {% endif %} 
-                {% endfor %}
-              </li>
-            {% endunless %}
-          {% else %}
-          {% assign poststamp = post.date | date: '%s' | plus: 0 %}
-          {% assign nowstamp = 'now' | date: '%s' %}
-          {% assign thenstamp = nowstamp | minus: newness %}
-          <li>
-              {% if poststamp > thenstamp %}
-                        <strong>New</strong>
-                    {% endif %}
-
-              <a href="{{ post.url }}">{{ post.title }}</a></li>
-          {% endif %}
-          </li>
+<ul class="navlist">
+{% assign posts = site.posts | where: "draft", false %}
+{% for post in posts %}
+  {% if post.series %}
+    {% unless series_shown contains post.series %}
+      {% assign series_shown = series_shown | push: post.series %}
+      {% assign series = site.data.series | where: "id", post.series | first %}
+      <li>
+        Series on <em>{{ series.topic }}</em>
+        {% assign reverse_posts = site.posts | reverse %}
+        {% for other in reverse_posts %}
+          {% if other.series == post.series %}
+            {% assign poststamp = other.date | date: '%s' | plus: 0 %}
+            {% assign nowstamp = 'now' | date: '%s' %}
+            {% assign thenstamp = nowstamp | minus: newness %}
+            —
+            {% if poststamp > thenstamp %}
+                <strong>New</strong>
+            {% endif %}
+            <a href="{{ other.url }}">{{ other.title }}</a>
+          {% endif %} 
         {% endfor %}
-       </ul>
+      </li>
+    {% endunless %}
+  {% else %}
+  {% assign poststamp = post.date | date: '%s' | plus: 0 %}
+  {% assign nowstamp = 'now' | date: '%s' %}
+  {% assign thenstamp = nowstamp | minus: newness %}
+  <li>
+      {% if poststamp > thenstamp %}
+                <strong>New</strong>
+            {% endif %}
+      <a href="{{ post.url }}">{{ post.title }}</a>
+  {% endif %}
+  </li>
+{% endfor %}
+</ul>
 
 <h1>Projects</h1>
-        <dl>
-        {% for project in site.projects %}
-        <dd style="margin: 0vw;"><a href="{{ project.url }}">{{ project.title }}</a> — {{ project.tagline }}</dd>
-        {% endfor %}
-        </dl>
+<ul class="navlist">
+  {% for project in site.projects %}
+  <li>
+      <a href="{{ project.url }}">{{ project.title }}</a> — {{ project.tagline }}
+  </li>
+  {% endfor %}
+</ul>

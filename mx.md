@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: page
 title: Why my title is Mx.
 permalink: /mx.html
 ---
-
-# My title is Mx.
 
 *Mx* is a gender-neutral title. It's also neutral for age, for whether
 you're married, and for anything else. Every human can use it.
