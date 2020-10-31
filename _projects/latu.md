@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: The Latu language
 tagline: An experiment — Building a grammar sketch for a conlang-in-progress with Jinja, Python, and Markdown.
 permalink: latu.html
