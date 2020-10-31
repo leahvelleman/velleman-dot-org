@@ -28,21 +28,40 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{% link index.html %}">Mx. {{ site.title | default: site.github.repository_name }}</a></h1>
-        <p>Coder, linguist, singer, occasional blogger.</p>
+        <h1 class="name"><a href="{% link index.html %}">Mx. Leah Velleman</a></h1>
+        <p>Coder, linguist, singer, occasional blogger. See my <a href="{{ site.github.owner_url }}">Github profile</a>
+           or my <a href="/assets/velleman_resume.pdf">résumé</a> and <a href="/resume.html">how I build it</a>.</p>
           <ul class="navlist">
-              <li><a href="{{ site.baseurl }}">All posts and projects</a></li>
-              <li><a href="{{ site.github.owner_url }}">Github profile</a></li>
-              <li><a href="{% link publications.md %}">Publications</a></li>
-              <li>My <a href="/assets/velleman_resume.pdf">résumé</a> 
-                  and <a href="/resume.html">how I build it</a></li>
-              <li><a href="{{ site.baseurl }} {% link mx.md %}">Why I use Mx.</a></p></li>
+              {% if page.permalink == 'index.html' %} 
+                <li class='current'>Posts and projects</li>
+              {% else %}
+                <li><a href="{% link index.html %}">Posts and projects</a></li>
+              {% endif %}
+              {% if page.layout == 'post' or page.layout == 'project' %}
+                <li class='current subhead'>{{ page.title }}</li>
+              {% endif %}
+              {% if page.permalink == 'publications.html' %} 
+                <li class='current'>Publications</li>
+              {% else %}
+                <li><a href="{% link publications.md %}">Publications</a></li>
+              {% endif %}
+              {% if page.permalink == 'elsewhere.html' %} 
+                <li class='current'>Find me elsewhere</li>
+              {% else %}
+                <li><a href="{% link elsewhere.md %}">Find me elsewhere</a></li>
+              {% endif %}
+              {% if page.permalink == 'mx.html' %} 
+                <li class='current'>Why I use Mx.</li>
+              {% else %}
+                <li><a href="{% link mx.md %}">Why I use Mx.</a></li>
+              {% endif %}
+          </ul>
       </header>
       <section>
         {{ content }}
       </section>
       <footer>
-        <a href="{% link feed.xml %}">Subscribe</a> | <a href="mailto:leahvelleman@gmail.com">Email</a> | <a href="{% link elsewhere.md %}">Elsewhere</a> 
+        <a href="{% link feed.xml %}">Subscribe</a> | <a href="mailto:leahvelleman@gmail.com">Email</a> 
       </footer>
     </div>
   </body>

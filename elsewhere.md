@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Elsewhere
-permalink: /elsewhere.html
+permalink: elsewhere.html
 ---
 
 # Elsewhere

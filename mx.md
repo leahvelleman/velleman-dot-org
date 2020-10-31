@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Why my title is Mx.
-permalink: /mx.html
+title: My title is Mx.
+permalink: mx.html
 ---
 
 *Mx* is a gender-neutral title. It's also neutral for age, for whether
@@ -30,7 +30,7 @@ a neutral title.
 
 ## But you're an editor! Isn't this incorrect?
 
-Sure is. Fuck it. Style guides are made by humans. We can change them.
+Style guides are made by humans. We can change them to serve human goals.
 
 ## Why don't you use Dr?
 
@@ -40,8 +40,9 @@ racist, and humiliating process.
 
 ## But my editor won't allow it!
 
-Not that I'm often written about in print, but if I were queen of the world and
-could make arbitrary demands, I would require people writing about me in this
-position to choose between *Mr* and *Ms* by a fair coin toss.
+If I were queen of the world and could make arbitrary demands, I would require
+people writing about me in this position to choose between *Mr* and *Ms* by a
+fair coin toss.
 
 (The actual answer is "ask your subject what they would prefer.")
+
