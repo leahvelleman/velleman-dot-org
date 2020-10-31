@@ -258,7 +258,7 @@ La4 | la la la8[ so] fa4 | La La La
 
 In colored blocks, they look like this:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightcyan" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="cyan" fill-rule="evenodd">
     <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z"/>
 </svg>
 
@@ -309,15 +309,15 @@ My _ soul on his sal-- _ va -- tion waits. }
 In block terms: instead of this...
 
 <svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
-    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="lightcyan"/>
-    <path d="M109.5 34.5h100v25h-100zm50-30h100v25h-100z" fill="#ddeeff"/>
+    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="cyan"/>
+    <path d="M109.5 34.5h100v25h-100zm50-30h100v25h-100z" class="blue"/>
 </svg>
 
 ...our buddy Daniel Read decided to do this.
 
 <svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
-    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="lightcyan"/>
-    <path d="M109.5 34.5h150v25h-150zm50-30h100v25h-100z" fill="#ddeeff"/>
+    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="cyan"/>
+    <path d="M109.5 34.5h150v25h-150zm50-30h100v25h-100z" class="blue"/>
 </svg>
 
 Once he's done that, the two parts are gathered and ready to move
@@ -425,7 +425,7 @@ The year of ju -- bi -- lee is come
 >>
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightcyan" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="cyan" fill-rule="evenodd">
     <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100zm55 30h100v25h-100z"/>
 </svg>
 
@@ -467,8 +467,8 @@ Re -- turn, ye ran -- somed sin -- ners, home. }
 >>
 ```
 <svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
-    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100zm55 30h100v25h-100z" class="lightcyan"/>
-    <path d="M159.5 4.5h155v25h-155zm55 30h100v25h-100z" fill="#ddeeff"/>
+    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100zm55 30h100v25h-100z" class="cyan"/>
+    <path d="M159.5 4.5h155v25h-155zm55 30h100v25h-100z" class="blue"/>
 </svg>
 
 ## Staggered by two
@@ -505,7 +505,7 @@ Where na -- ture all in _ ru -- in lies, }
 >>
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightcyan" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="cyan" fill-rule="evenodd">
     <path d="M4.5 34.5h95v25h-95zm100 0h95v25h-95zm0-30h95v25h-95z"/>
 </svg>
 
@@ -538,7 +538,7 @@ so4 | Fa Fa Fa Fa | so2. so4 | Fa1( | So2 so, | Fa2.)
 >>
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightcyan" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="cyan" fill-rule="evenodd">
     <path d="M4.5 34.5h195v25H4.5zm100-30h95v25h-95z"/>
 </svg>
 

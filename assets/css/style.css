@@ -167,7 +167,11 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
 
 .lightblue { fill: var(--lightblue); }
 
+.blue { fill: var(--blue); }
+
 .lightcyan{ fill: var(--lightcyan); }
+
+.cyan{ fill: var(--cyan); }
 
 .solarized1{ fill: var(--solarized1); }
 
