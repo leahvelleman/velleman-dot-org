@@ -13,7 +13,7 @@ Ghostbusters tells us about the hidden rules of conversation.</a> In <i>Slate,</
 2014.</li> 
 <li><a class="reference external"
 href="http://www.slate.com/blogs/lexicon_valley/2014/08/26/geocentric_direction_systems_use_uphill_uptown_instead_of_north_south_found.html">When
-“north” isn’t actually north.</a> In <i>Slate,</i> 26 Aug 2014.</a></li>
+“north” isn’t actually north.</a> In <i>Slate,</i> 26 Aug 2014.</li>
 </ul>
 
 ## Tech writing
