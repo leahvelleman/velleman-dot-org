@@ -40,6 +40,8 @@ plugins:
   - jekyll-lilypond-converter
   - jekyll-tidy
 
+exclude: ['lily_images']
+
 lilypond-image-format: svg
 
 twitter:
