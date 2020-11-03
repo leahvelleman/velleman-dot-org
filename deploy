@@ -1,5 +1,7 @@
 #!/bin/sh
 
+rm -rf lily_images
+mkdir lily_images
 bundle exec jekyll clean
 bundle exec jekyll build
 rsync -avzh --delete _site/ dvelleman_vellemandotorg@ssh.phx.nearlyfreespeech.net:/home/public/
