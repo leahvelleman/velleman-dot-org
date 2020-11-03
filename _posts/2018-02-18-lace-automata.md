@@ -26,8 +26,14 @@ out some of their properties. As cellular automata, they're similar to,
 but not the same as, Wolfram's [elementary cellular
 automata](en.wikipedia.org/wiki/Elementary_cellular_automaton). The
 differences mean there are a *lot* more lace automata than ECAs:
-(2<sup>3</sup>)<sup>(2<sup>3</sup>)</sup> = 16777216 rather than
-2<sup>(2<sup>3</sup>)</sup> = 256. And they mean that lace automata can
+
+>   (2<sup>3</sup>)<sup>(2<sup>3</sup>)</sup> = 16777216 
+
+of them rather than
+
+>   2<sup>(2<sup>3</sup>)</sup> = 256. 
+
+And they mean that lace automata can
 do some things ECAs can't, like make patterns that grow at irregular
 speeds, or at less than the "speed of light," or that alternate between
 growing and shrinking.
@@ -158,15 +164,14 @@ Implementation
 Now that we've converted lace automata into something more familiar,
 it's easy enough to write code to run them.
 
-Let's say a state is a number from <span class="title-ref">0b000</span>
-through <span class="title-ref">0b111</span> --- or in other words, zero
+Let's say a state is a number from `0b000`
+through `0b111` --- or in other words, zero
 through eight, but as we saw above it's more convenient to think of them
 in terms of bits. The leftmost bit represents a line leaving on the left
 diagonal, and similarly for the middle and rightmost bit.
 
 We can also represent the *inputs* to our automaton's rule as numbers
-from <span class="title-ref">0b000</span> through <span
-class="title-ref">0b111</span>. Here, the leftmost bit represents a line
+from `0b000` through `0b111`. Here, the leftmost bit represents a line
 *entering* on the left diagonal, and similarly for the middle and
 rightmost bits.
 
