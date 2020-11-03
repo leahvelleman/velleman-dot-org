@@ -1,16 +1,17 @@
 :root {
-    --cyan: #2AA198;
-    --blue: #267CB9; /* not a solarized color */
+    --cyan: #1A938A;
+    --blue: #267CB9;
     --green: #859900;
     --orange: #cb4b16;
     --red: #dc322f;
-    --lightcyan: #EFFBFA;
-    --lightblue: #DDEDF8;
-    --darkblue: #195b8a;
-    --solarized1: #fffaf0; /* not a solarized color */
-    --solarized2: #eee8d5;
+    --lightcyan: #BEF9F5;
+    --lightblue: #B3DBF8;
+    --lightgreen: #E6FB5B;
+    --lightorange: #FFAD4E;
+    --lightred: #FF97A5;
+    --solarized1: #fdf6e3;
     --secondary: #073642;
-    --primary: #586e75;
+    --primary: #555;
     --comment: #839496;
 }
 
@@ -95,9 +96,9 @@ h1, h2, h3 { line-height: 1.1; }
 
 h1 { font-size: 28px; }
 
-hr { border: none; }
+hr { border: none; margin: none; padding: none; }
 
-hr::before { content: "❦"; display: block; text-align: center; }
+hr::before { content: "* * * "; display: block; text-align: center; font-size: 20px; }
 
 a { color: var(--blue); text-decoration: none; }
 
@@ -169,13 +170,16 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
 
 .blue { fill: var(--blue); }
 
-.lightcyan{ fill: var(--lightcyan); }
+.lightgreen{ fill: var(--lightgreen); }
 
 .cyan{ fill: var(--cyan); }
 
+.lightred{ fill: var(--lightred); }
+
 .solarized1{ fill: var(--solarized1); }
 
-.solarized2{ fill: var(--solarized2); }
+.lightred{ fill: var(--lightred); }
+.lightorange{ fill: var(--lightorange); }
 
 @media only screen and (max-width: 500px) {
   .tooltiptext {

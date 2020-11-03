@@ -29,35 +29,35 @@ rhythmic unison, nobody skips any words, and if anyone repeats a word or a
 phrase then everyone else does too. 
 
 <svg xmlns="http://www.w3.org/2000/svg" width="470" height="230" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd" font-family="Roboto" font-size="14" text-anchor="middle">
-    <path class="lightcyan" d="M1 179.5h260v50H1z"/>
+    <path class="lightblue" d="M1 179.5h260v50H1z"/>
     <text fill="#000" stroke="none">
         <tspan x="129.5" y="209.12">Amazing grace, how sweet the sound,</tspan>
     </text>
-    <path class="lightcyan" d="M1 119.5h260v50H1z"/>
+    <path class="lightblue" d="M1 119.5h260v50H1z"/>
     <text fill="#000" stroke="none">
         <tspan x="129.5" y="149.12">Amazing grace, how sweet the sound,</tspan>
     </text>
-    <path class="lightcyan" d="M1 59.5h260v50H1z"/>
+    <path class="lightblue" d="M1 59.5h260v50H1z"/>
     <text fill="#000" stroke="none">
         <tspan x="129.5" y="89.12">Amazing grace, how sweet the sound,</tspan>
     </text>
-    <path class="lightcyan" d="M1 1h260v50H1z"/>
+    <path class="lightblue" d="M1 1h260v50H1z"/>
     <text fill="#000" stroke="none">
         <tspan x="129.5" y="29.12">Amazing grace, how sweet the sound,</tspan>
     </text>
-    <path class="lightblue" d="M269.5 1h200v50h-200z"/>
+    <path class="lightred" d="M269.5 1h200v50h-200z"/>
     <text fill="#000" stroke="none">
         <tspan x="369.5" y="29.12">That saved a wretch like me!</tspan>
     </text>
-    <path class="lightblue" d="M269.5 59.5h200v50h-200z"/>
+    <path class="lightred" d="M269.5 59.5h200v50h-200z"/>
     <text fill="#000" stroke="none">
         <tspan x="369.5" y="89.12">That saved a wretch like me!</tspan>
     </text>
-    <path class="lightblue" d="M269.5 119.5h200v50h-200z"/>
+    <path class="lightred" d="M269.5 119.5h200v50h-200z"/>
     <text fill="#000" stroke="none">
         <tspan x="369.5" y="149.12">That saved a wretch like me!</tspan>
     </text>
-    <path class="lightblue" d="M269.5 179.5h200v50h-200z"/>
+    <path class="lightred" d="M269.5 179.5h200v50h-200z"/>
     <text fill="#000" stroke="none">
         <tspan x="369.5" y="209.12">That saved a wretch like me!</tspan>
     </text>
@@ -72,67 +72,67 @@ come back into sync...
     <style>
         <![CDATA[.B{fill:#000}.C{stroke:none}.D{fill:#ddeeff}]]>
     </style>
-    <path class="lightcyan" d="M0 164.5h85v50h-85z"/>
+    <path class="lightblue" d="M0 164.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="42" y="194.12">Amazing...</tspan>
     </text>
-    <path d="M89.5 164.5h85v50h-85z" class="D"/>
+    <path d="M89.5 164.5h85v50h-85z" class="lightred"/>
     <text class="B C">
         <tspan x="132" y="194.12">That saved...</tspan>
     </text>
-    <path fill="#eee8d5" d="M179.5 164.5h85v50h-85z"/>
+    <path class="lightgreen" d="M179.5 164.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="222" y="194.12">I once was...</tspan>
     </text>
-    <path fill="#fdf6e3" d="M269.5 164.5h85v50h-85z"/>
+    <path class="lightorange" d="M269.5 164.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="312" y="194.12">Was blind...</tspan>
     </text>
-    <path class="lightcyan" d="M49.5 109.5h85v50h-85z"/>
+    <path class="lightblue" d="M49.5 109.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="92" y="139.12">Amazing...</tspan>
     </text>
-    <path d="M139.5 109.5h85v50h-85z" class="D"/>
+    <path d="M139.5 109.5h85v50h-85z" class="lightred"/>
     <text class="B C">
         <tspan x="182" y="139.12">That saved...</tspan>
     </text>
-    <path fill="#eee8d5" d="M229.5 109.5h85v50h-85z"/>
+    <path class="lightgreen" d="M229.5 109.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="272" y="139.12">I once was...</tspan>
     </text>
-    <path fill="#fdf6e3" d="M319.5 109.5h85v50h-85z"/>
+    <path class="lightorange" d="M319.5 109.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="362" y="139.12">Was blind...</tspan>
     </text>
-    <path class="lightcyan" d="M89.5 54.5h85v50h-85z"/>
+    <path class="lightblue" d="M89.5 54.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="132" y="84.12">Amazing...</tspan>
     </text>
-    <path d="M179.5 54.5h85v50h-85z" class="D"/>
+    <path d="M179.5 54.5h85v50h-85z" class="lightred"/>
     <text class="B C">
         <tspan x="222" y="84.12">That saved...</tspan>
     </text>
-    <path fill="#eee8d5" d="M269.5 54.5h85v50h-85z"/>
+    <path class="lightgreen" d="M269.5 54.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="312" y="84.12">I once was...</tspan>
     </text>
-    <path fill="#fdf6e3" d="M359.5 54.5h85v50h-85z"/>
+    <path class="lightorange" d="M359.5 54.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="402" y="84.12">Was blind...</tspan>
     </text>
-    <path class="lightcyan" d="M139.5-.5h85v50h-85z"/>
+    <path class="lightblue" d="M139.5-.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="182" y="29.12">Amazing...</tspan>
     </text>
-    <path d="M229.5-.5h85v50h-85z" class="D"/>
+    <path d="M229.5-.5h85v50h-85z" class="lightred"/>
     <text class="B C">
         <tspan x="272" y="29.12">That saved...</tspan>
     </text>
-    <path fill="#eee8d5" d="M319.5-.5h85v50h-85z"/>
+    <path class="lightgreen" d="M319.5-.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="362" y="29.12">I once was...</tspan>
     </text>
-    <path fill="#fdf6e3" d="M409.5-.5h85v50h-85z"/>
+    <path class="lightorange" d="M409.5-.5h85v50h-85z"/>
     <text class="B C">
         <tspan x="452" y="29.12">Was blind...</tspan>
     </text>
@@ -142,43 +142,43 @@ come back into sync...
 
 <svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
     <style>
-        <![CDATA[.Rgb6{fill:#ddffee}.VNq0{fill:#ddeeff}.oI77{fill:#eee8d5}.nvVo{fill:#fdf6e3}]]>
+        <![CDATA[.Rgb6{fill:#ddffee}.VNq0{fill:#ddedf8}.oI77{fill:#eee8d5}.nvVo{fill:#fdf6e3}]]>
     </style>
-    <path d="M2 49.5h40v10H2z" class="Rgb6"/>
-    <path d="M52 49.5h40v10H52z" class="VNq0"/>
-    <path d="M102 49.5h40v10h-40z" class="oI77"/>
-    <path d="M152 49.5h40v10h-40z" class="nvVo"/>
-    <path d="M32 34.5h40v10H32z" class="Rgb6"/>
-    <path d="M82 34.5h40v10H82z" class="VNq0"/>
-    <path d="M132 34.5h40v10h-40z" class="oI77"/>
-    <path d="M182 34.5h40v10h-40z" class="nvVo"/>
-    <path d="M52 19.5h40v10H52z" class="Rgb6"/>
-    <path d="M102 19.5h40v10h-40z" class="VNq0"/>
-    <path d="M152 19.5h40v10h-40z" class="oI77"/>
-    <path d="M202 19.5h40v10h-40z" class="nvVo"/>
-    <path d="M82 4.5h40v10H82z" class="Rgb6"/>
-    <path d="M132 4.5h40v10h-40z" class="VNq0"/>
-    <path d="M182 4.5h40v10h-40z" class="oI77"/>
-    <path d="M232 4.5h40v10h-40z" class="nvVo"/>
-    <path d="M202 49.5h40v10h-40z" class="Rgb6"/>
-    <path d="M252 49.5h40v10h-40z" class="VNq0"/>
-    <path d="M302 49.5h40v10h-40z" class="oI77"/>
-    <path d="M352 49.5h40v10h-40z" class="nvVo"/>
-    <path d="M232 34.5h40v10h-40z" class="Rgb6"/>
-    <path d="M282 34.5h40v10h-40z" class="VNq0"/>
-    <path d="M332 34.5h40v10h-40z" class="oI77"/>
-    <path d="M382 34.5h40v10h-40z" class="nvVo"/>
-    <path d="M252 19.5h40v10h-40z" class="Rgb6"/>
-    <path d="M302 19.5h40v10h-40z" class="VNq0"/>
-    <path d="M352 19.5h40v10h-40z" class="oI77"/>
-    <path d="M402 19.5h40v10h-40z" class="nvVo"/>
-    <path d="M282 4.5h40v10h-40z" class="Rgb6"/>
-    <path d="M332 4.5h40v10h-40z" class="VNq0"/>
-    <path d="M382 4.5h40v10h-40z" class="oI77"/>
-    <path d="M432 4.5h32.5v10H432z" class="nvVo"/>
-    <path d="M402 49.5h40v10h-40z" class="Rgb6"/>
-    <path d="M452 49.5h12.5v10H452z" class="VNq0"/>
-    <path d="M432 34.5h32.5v10H432zm20-15h12.5v10H452z" class="Rgb6"/>
+    <path d="M2 49.5h40v10H2z" class="lightblue"/>
+    <path d="M52 49.5h40v10H52z" class="lightred"/>
+    <path d="M102 49.5h40v10h-40z" class="lightgreen"/>
+    <path d="M152 49.5h40v10h-40z" class="lightorange"/>
+    <path d="M32 34.5h40v10H32z" class="lightblue"/>
+    <path d="M82 34.5h40v10H82z" class="lightred"/>
+    <path d="M132 34.5h40v10h-40z" class="lightgreen"/>
+    <path d="M182 34.5h40v10h-40z" class="lightorange"/>
+    <path d="M52 19.5h40v10H52z" class="lightblue"/>
+    <path d="M102 19.5h40v10h-40z" class="lightred"/>
+    <path d="M152 19.5h40v10h-40z" class="lightgreen"/>
+    <path d="M202 19.5h40v10h-40z" class="lightorange"/>
+    <path d="M82 4.5h40v10H82z" class="lightblue"/>
+    <path d="M132 4.5h40v10h-40z" class="lightred"/>
+    <path d="M182 4.5h40v10h-40z" class="lightgreen"/>
+    <path d="M232 4.5h40v10h-40z" class="lightorange"/>
+    <path d="M202 49.5h40v10h-40z" class="lightblue"/>
+    <path d="M252 49.5h40v10h-40z" class="lightred"/>
+    <path d="M302 49.5h40v10h-40z" class="lightgreen"/>
+    <path d="M352 49.5h40v10h-40z" class="lightorange"/>
+    <path d="M232 34.5h40v10h-40z" class="lightblue"/>
+    <path d="M282 34.5h40v10h-40z" class="lightred"/>
+    <path d="M332 34.5h40v10h-40z" class="lightgreen"/>
+    <path d="M382 34.5h40v10h-40z" class="lightorange"/>
+    <path d="M252 19.5h40v10h-40z" class="lightblue"/>
+    <path d="M302 19.5h40v10h-40z" class="lightred"/>
+    <path d="M352 19.5h40v10h-40z" class="lightgreen"/>
+    <path d="M402 19.5h40v10h-40z" class="lightorange"/>
+    <path d="M282 4.5h40v10h-40z" class="lightblue"/>
+    <path d="M332 4.5h40v10h-40z" class="lightred"/>
+    <path d="M382 4.5h40v10h-40z" class="lightgreen"/>
+    <path d="M432 4.5h32.5v10H432z" class="lightorange"/>
+    <path d="M402 49.5h40v10h-40z" class="lightblue"/>
+    <path d="M452 49.5h12.5v10H452z" class="lightred"/>
+    <path d="M432 34.5h32.5v10H432zm20-15h12.5v10H452z" class="lightblue"/>
 </svg>
 
 Something would have to give.
@@ -258,7 +258,7 @@ La4 | la la la8[ so] fa4 | La La La
 
 In colored blocks, they look like this:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="cyan" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightblue" fill-rule="evenodd">
     <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z"/>
 </svg>
 
@@ -309,15 +309,15 @@ My _ soul on his sal-- _ va -- tion waits. }
 In block terms: instead of this...
 
 <svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
-    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="cyan"/>
-    <path d="M109.5 34.5h100v25h-100zm50-30h100v25h-100z" class="blue"/>
+    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="lightblue"/>
+    <path d="M109.5 34.5h100v25h-100zm50-30h100v25h-100z" class="lightred"/>
 </svg>
 
 ...our buddy Daniel Read decided to do this.
 
 <svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
-    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="cyan"/>
-    <path d="M109.5 34.5h150v25h-150zm50-30h100v25h-100z" class="blue"/>
+    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="lightblue"/>
+    <path d="M109.5 34.5h150v25h-150zm50-30h100v25h-100z" class="lightred"/>
 </svg>
 
 Once he's done that, the two parts are gathered and ready to move
@@ -425,7 +425,7 @@ The year of ju -- bi -- lee is come
 >>
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="cyan" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightblue" fill-rule="evenodd">
     <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100zm55 30h100v25h-100z"/>
 </svg>
 
@@ -467,8 +467,8 @@ Re -- turn, ye ran -- somed sin -- ners, home. }
 >>
 ```
 <svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
-    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100zm55 30h100v25h-100z" class="cyan"/>
-    <path d="M159.5 4.5h155v25h-155zm55 30h100v25h-100z" class="blue"/>
+    <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100zm55 30h100v25h-100z" class="lightblue"/>
+    <path d="M159.5 4.5h155v25h-155zm55 30h100v25h-100z" class="lightred"/>
 </svg>
 
 ## Staggered by two
@@ -505,7 +505,7 @@ Where na -- ture all in _ ru -- in lies, }
 >>
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="cyan" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightblue" fill-rule="evenodd">
     <path d="M4.5 34.5h95v25h-95zm100 0h95v25h-95zm0-30h95v25h-95z"/>
 </svg>
 
@@ -538,7 +538,7 @@ so4 | Fa Fa Fa Fa | so2. so4 | Fa1( | So2 so, | Fa2.)
 >>
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="cyan" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightblue" fill-rule="evenodd">
     <path d="M4.5 34.5h195v25H4.5zm100-30h95v25h-95z"/>
 </svg>
 
@@ -554,11 +554,19 @@ In another sense, this is completely missing the point. Lining bricks up isn't
 composing. It isn't even the _rhythmic_ part of composing. If I've got these two measures...
 
 ```lilypond
+\paper{
+ragged-right = ##t
+}
+\include "fasola.ily"
+isMajor = ##f
+pitch = c 
 \relative c'' { 
+\key c \major
+\sacredHarpHeads
 \partial 4 
 c4 | c4 c c e | g e c
 }
-\addlyrics { A -- ma -- zing grace, how sweet the sound }
+\addlyrics { "Amazing grace, how sweet the sound" _ _ _ _ _ _ _ }
 ```
 
 ...and need to stretch them out to four, 
@@ -566,15 +574,31 @@ I could decorate them in any of these ways or
 dozens of others. 
 
 ```lilypond
+\paper{
+ragged-right = ##t
+}
+\include "fasola.ily"
+isMajor = ##f
+pitch = c 
 \relative c'' { 
+\key c \major
+\sacredHarpHeads
 \partial 4 
 c4 | c4 c c e | g e c2~ | c1~ | c2.
 }
-\addlyrics { A -- ma -- zing grace, how sweet the sound }
+\addlyrics { "Amazing grace, how sweet the sound" _ _ _ _ _ _ _ }
 ```
 
 ```lilypond
+\paper{
+ragged-right = ##t
+}
+\include "fasola.ily"
+isMajor = ##f
+pitch = c 
 \relative c'' { 
+\key c \major
+\sacredHarpHeads
 \partial 4 
 c4 | c2. c4 | c( d e) f | g( f e ) d | c2.
 }
@@ -582,7 +606,15 @@ c4 | c2. c4 | c( d e) f | g( f e ) d | c2.
 ```
 
 ```lilypond
+\paper{
+ragged-right = ##t
+}
+\include "fasola.ily"
+isMajor = ##f
+pitch = c 
 \relative c'' { 
+\key c \major
+\sacredHarpHeads
 \partial 4 
 c4 | c4. c8 c4 r | r2. e4 | g4. e8 c4 r | r2.
 }
@@ -591,6 +623,8 @@ c4 | c4. c8 c4 r | r2. e4 | g4. e8 c4 r | r2.
 
 ```lilypond
 \relative c'' { 
+\key c \major
+\sacredHarpHeads
 \partial 4 
 c4 | c8[( d] e[ f] g[ a]) g4 | g4 g4 g4.( e8 | c4) c c4( b | a2.)
 }
