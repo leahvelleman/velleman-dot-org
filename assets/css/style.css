@@ -1,4 +1,21 @@
 :root {
+    --cyan: #2aa198;
+    --blue: #268bd2; /*  solarized blue */
+    --green: #23415a;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --lightcyan: paleturquoise;
+    --lightblue: #bedcf2; /* lighter shade of solarized blue */
+    --lightgreen: khaki;
+    --lightorange: sandybrown;
+    --lightred: lightpink;
+    --solarized1: #fdf6e3;
+    --code: #586e75;
+    --link: #1e6fa8; /* darker shade of solarized blue */
+    --primary: #333;
+    --comment: #839496;
+}
+/* :root {
     --cyan: #1A938A;
     --blue: #267CB9;
     --green: #859900;
@@ -13,68 +30,69 @@
     --secondary: #073642;
     --primary: #555;
     --comment: #839496;
-}
+} */
 
 
-.highlight { background-color: var(--solarized1); color: var(--primary); }
+.highlight { background-color: var(--solarized1); color: var(--code); }
 .highlight .c { color: var(--secondary); } /* Comment */
-.highlight .err { color: var(--primary); } /* Error */
-.highlight .g { color: var(--primary); } /* Generic */
+.highlight .err { color: var(--code); } /* Error */
+.highlight .g { color: var(--code); } /* Generic */
 .highlight .k { color: var(--green); } /* Keyword */
-.highlight .l { color: var(--primary); } /* Literal */
-.highlight .n { color: var(--primary); } /* Name */
+.highlight .l { color: var(--code); } /* Literal */
+.highlight .n { color: var(--code); } /* Name */
 .highlight .o { color: var(--green); } /* Operator */
 .highlight .x { color: var(--orange); } /* Other */
-.highlight .p { color: var(--primary); } /* Punctuation */
+.highlight .p { color: var(--code); } /* Punctuation */
 .highlight .cm { color: var(--comment); } /* Comment.Multiline */
 .highlight .cp { color: var(--green); } /* Comment.Preproc */
 .highlight .c1 { color: var(--comment); } /* Comment.Single */
 .highlight .cs { color: var(--green); } /* Comment.Special */
 .highlight .gd { color: var(--cyan);} /* Generic.Deleted */
-.highlight .ge { color: var(--primary); font-style: italic } /* Generic.Emph */
+.highlight .ge { color: var(--code); font-style: italic } /* Generic.Emph */
 .highlight .gr { color: var(--red); } /* Generic.Error */
 .highlight .gh { color: var(--orange); } /* Generic.Heading */
 .highlight .gi { color: var(--green); } /* Generic.Inserted */
-.highlight .go { color: var(--primary); } /* Generic.Output */
-.highlight .gp { color: var(--primary); } /* Generic.Prompt */
-.highlight .gs { color: var(--primary); font-weight: bold } /* Generic.Strong */
+.highlight .go { color: var(--code); } /* Generic.Output */
+.highlight .gp { color: var(--code); } /* Generic.Prompt */
+.highlight .gs { color: var(--code); font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: var(--orange); } /* Generic.Subheading */
-.highlight .gt { color: var(--primary); } /* Generic.Traceback */
+.highlight .gt { color: var(--code); } /* Generic.Traceback */
 .highlight .kc { color: var(--orange); } /* Keyword.Constant */
 .highlight .kd { color: var(--blue);} /* Keyword.Declaration */
 .highlight .kn { color: var(--green); } /* Keyword.Namespace */
 .highlight .kp { color: var(--green); } /* Keyword.Pseudo */
 .highlight .kr { color: var(--blue);} /* Keyword.Reserved */
 .highlight .kt { color: var(--red); } /* Keyword.Type */
-.highlight .ld { color: var(--primary); } /* Literal.Date */
+.highlight .ld { color: var(--code); } /* Literal.Date */
 .highlight .m { color: var(--cyan);} /* Literal.Number */
 .highlight .s { color: var(--cyan);} /* Literal.String */
-.highlight .na { color: var(--primary); } /* Name.Attribute */
-.highlight .nb { color: #B58900 } /* Name.Builtin */
+.highlight .na { color: var(--code); } /* Name.Attribute */
+.highlight .nb { color: var(--orange);} /* Name.Builtin */
 .highlight .nc { color: var(--blue);} /* Name.Class */
 .highlight .no { color: var(--orange); } /* Name.Constant */
 .highlight .nd { color: var(--blue);} /* Name.Decorator */
 .highlight .ni { color: var(--orange); } /* Name.Entity */
 .highlight .ne { color: var(--orange); } /* Name.Exception */
 .highlight .nf { color: var(--blue);} /* Name.Function */
-.highlight .nl { color: var(--primary); } /* Name.Label */
-.highlight .nn { color: var(--primary); } /* Name.Namespace */
-.highlight .nx { color: var(--primary); } /* Name.Other */
-.highlight .py { color: var(--primary); } /* Name.Property */
+.highlight .nl { color: var(--code); } /* Name.Label */
+.highlight .nn { color: var(--code); } /* Name.Namespace */
+.highlight .nx { color: var(--code); } /* Name.Other */
+.highlight .py { color: var(--code); } /* Name.Property */
 .highlight .nt { color: var(--blue);} /* Name.Tag */
 .highlight .nv { color: var(--blue);} /* Name.Variable */
 .highlight .ow { color: var(--green); } /* Operator.Word */
-.highlight .w { color: var(--primary); } /* Text.Whitespace */
+.highlight .w { color: var(--code); } /* Text.Whitespace */
 .highlight .mf { color: var(--cyan);} /* Literal.Number.Float */
 .highlight .mh { color: var(--cyan);} /* Literal.Number.Hex */
 .highlight .mi { color: var(--cyan);} /* Literal.Number.Integer */
 .highlight .mo { color: var(--cyan);} /* Literal.Number.Oct */
+.highlight .mb { color: var(--cyan);} /* Literal.Number.Binary???? */
 .highlight .sb { color: var(--secondary); } /* Literal.String.Backtick */
 .highlight .sc { color: var(--cyan);} /* Literal.String.Char */
-.highlight .sd { color: var(--primary); } /* Literal.String.Doc */
+.highlight .sd { color: var(--code); } /* Literal.String.Doc */
 .highlight .s2 { color: var(--cyan);} /* Literal.String.Double */
 .highlight .se { color: var(--orange); } /* Literal.String.Escape */
-.highlight .sh { color: var(--primary); } /* Literal.String.Heredoc */
+.highlight .sh { color: var(--code); } /* Literal.String.Heredoc */
 .highlight .si { color: var(--cyan);} /* Literal.String.Interpol */
 .highlight .sx { color: var(--cyan);} /* Literal.String.Other */
 .highlight .sr { color: var(--red); } /* Literal.String.Regex */
@@ -86,70 +104,101 @@
 .highlight .vi { color: var(--blue);} /* Name.Variable.Instance */
 .highlight .il { color: var(--cyan);} /* Literal.Number.Integer.Long */
 
-body { background-color: #FFF; padding: 50px; font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--primary); font-weight: 400; }
+body { background-color: #FFF; padding: 50px; font: 15px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--primary); font-weight: 400; }
 
-h1, h2, h3, h4, h5, h6 { color: var(--secondary); margin: 0 0 18px; }
+.wrapper { width: 860px; left: 0; }
 
-p, ul, ol, table, dl, div.admonition, div.highlight, svg { margin: 0 0 18px; }
+header, footer { width: 270px; float: left; position: fixed; }
+
+footer { bottom: 50px; }
+
+main { width: 500px; float: right; padding-bottom: 50px; }
+
+
+
+h1, h2, h3, h4, h5, h6, hr { margin: 0 0 18px; }
+
+p, ul, ol, table, dl, div.admonition, div.highlight, div.music, svg { margin: 0 0 18px; }
 
 h1, h2, h3 { line-height: 1.1; }
 
 h1 { font-size: 28px; }
 
-hr { border: none; margin: none; padding: none; }
+hr { border: none; padding: none; margin-bottom: 36px; }
 
-hr::before { content: "* * * "; display: block; text-align: center; font-size: 20px; }
+a { color: var(--link); text-decoration: none; }
 
-a { color: var(--blue); text-decoration: none; }
+a:hover, a:focus, a:hover { color: var(--primary); text-decoration: underline;}
 
-a:hover, a:focus { color: var(--secondary); text-decoration: underline;}
+header a { text-decoration: none; }
 
-strong, b, .tooltip { color: var(--secondary); font-weight: 700; }
-
-.wrapper { width: 860px; left: 0; }
-
-.navlist { list-style: none; padding-left: 0; }
-
-.navlist li { margin-bottom: 8px; }
-
-.navlist li.current { color: var(--secondary); }
-
-.navlist li.current.subhead { padding-left: 26px; }
+strong, b, .tooltip { font-weight: 700; }
 
 blockquote { margin: 0; padding: 0 0 0 26px; }
 
-code, pre { color: var(--secondary); font: 13px/1.5 Monaco, monospace; }
+pre, code { font: 13px/1.5 Monaco, monospace; font-weight: 400; }
 
-div.highlight pre.highlight code { color: var(--primary); }
+small { font-size: 11px; }
 
-img { max-width: 484px; padding: 8px 8px }
 
-pre, img[alt=Music], div.admonition, div.highlight, div.admonition h4, div.admonition p { padding: 8px 8px; width: auto; overflow-x: auto; max-width: 484px; border-radius: 8px;}
 
-pre, div.admonition h4, div.admonition p { margin: 0; }
+img { max-width: 484px; }
 
-pre, img[alt=Music], .highlight { background-color: var(--solarized1); }
-
-.admonition { background-color: var(--lightblue); }
-
-.meta { color: var(--comment); }
+    /* let sheet music scroll left-to-right rather than shrinking it to fit, and always put the
+     * play and save buttons above it rather than taking up horizontal space */
+    div.music { overflow-x: auto; clear: both; width: 500px; } 
+    div.score img { width: auto; max-width: none; } 
 
 table { width: 100%; border-collapse: collapse; }
 
 th, td { text-align: left; padding: 5px 10px; border-bottom: 1px solid var(--comment); }
 
-dt { color: var(--secondary); font-weight: 700; }
+dt { color: var(--primary); font-weight: 700; }
 
-th { color: var(--secondary); }
-
-header { width: 270px; float: left; position: fixed; }
+th { color: var(--primary); }
 
 
-section { width: 500px; float: right; padding-bottom: 50px; }
 
-small { font-size: 11px; }
+/* For content only intended for screen reader users:
+ * https://webaim.org/techniques/css/invisiblecontent/ */
+#skiptocontent a { position:absolute; left:0px; top:-40px; overflow:hidden; z-index: 100; }
+#skiptocontent a:focus { position:absolute; left:0px; top:0px; }
 
-footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-smoothing: subpixel-antialiased; }
+.meta { color: var(--comment); }
+
+.datepill { background-color: var(--lightblue); border-radius: 3px; font-size: 12px; padding: 2px 4px; font-weight: bold; }
+
+
+
+.navlist { list-style: none; padding-left: 0; }
+
+.navlist .sublist { padding-left: 26px; margin-bottom: 8px; }
+
+.current.subhead { padding-left: 26px; }
+
+.prev {float: left; }
+.next {float: right; }
+
+
+pre, div.score { padding: 8px 8px; width: auto; overflow: visible; max-width: 500px; }
+
+pre, { margin: 0; }
+
+pre, div.music, div.highlight { background-color: var(--solarized1); }
+
+div.admonition { margin: 0 0 36px; padding: 0px; font-weight: bold; }
+div.admonition ol { list-style: decimal inside; margin: 0; padding: 0; }
+div.admonition p { margin: 0; padding: 0; }
+
+
+.lilymenu { margin: -15px 0 18px; padding: 0; }
+
+.lilymenu, .lilymenu a { color: var(--comment); text-decoration: none; font-size: 13px; }
+
+.lilymenu a:hover { color: var(--primary); text-decoration: underline; }
+
+
+
 
 .active { font-weight: 700; }
 
@@ -164,7 +213,6 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
 .tooltipline::after { content: "\a"; white-space: pre; }
 
 .lexentry { margin-top: 1ex; border-top: 1px solid var(--primary); }
-
 
 .lightblue { fill: var(--lightblue); }
 
@@ -195,19 +243,18 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
   }
 }
 
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover + .tooltiptext  {
-  visibility: visible;
-}
-
-@media print, screen and (max-width: 960px) { div.wrapper { width: auto; margin: 0; }
-  header, section, footer { float: none; position: static; width: auto; }
+@media print, screen and (max-width: 960px) { 
+  div.wrapper { width: auto; margin: 0; }
+  header, main, footer { float: none; position: static; width: auto; max-width: 500px; }
   section { padding: 20px 0; margin: 0 0 20px; }
+  img { width: 100%; height: auto; max-width: none; }
   header a small { display: inline; }
   header ul li { display: inline-block; margin-right: 18px; }
+  div.music { overflow-x: auto; clear: both; width: auto; max-width: 500px; } 
   .navlist li.current { color: var(--primary); display: inline-block; margin-right: 1em; padding: 0; margin: 0 18px 8px 0;}
   .subhead { display: none; }
+
+}
 @media print, screen and (max-width: 720px) { body { word-wrap: break-word; }
   header { padding: 0; }
   pre, code { word-wrap: normal; } }
