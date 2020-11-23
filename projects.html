@@ -1,0 +1,12 @@
+---
+layout: default
+permalink: projects.html
+---
+<h1>Projects</h1>
+<ul class="navlist">
+  {% for project in site.projects %}
+  <li>
+      <a href="{{ project.url }}">{{ project.title }}</a> — {{ project.tagline }}
+  </li>
+  {% endfor %}
+</ul>

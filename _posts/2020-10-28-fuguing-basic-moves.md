@@ -28,7 +28,9 @@ In a traditional hymn, everyone sings the same words. Everyone sings in
 rhythmic unison, nobody skips any words, and if anyone repeats a word or a
 phrase then everyone else does too. 
 
-<svg xmlns="http://www.w3.org/2000/svg" width="470" height="230" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd" font-family="Roboto" font-size="14" text-anchor="middle">
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="230" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd" font-family="Roboto" font-size="14" text-anchor="middle" id="synchronized" aria-labelledby="synchronizedtitle synchronizeddesc">
+    <title id="synchronizedtitle">Four voices in rhythmic unison</title>
+    <desc id="synchronizeddesc">A diagram representing four voices in rhythmic unison. First they all sing the first line of Amazing Grace, then they all sing the second line</desc>
     <path class="lightblue" d="M1 179.5h260v50H1z"/>
     <text fill="#000" stroke="none">
         <tspan x="129.5" y="209.12">Amazing grace, how sweet the sound,</tspan>
@@ -68,7 +70,9 @@ different times* and then did that, singing the same words at the same pace,
 not skipping, and not repeating more or less than anyone else — you'd never
 come back into sync...
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="215" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd" font-family="Roboto" font-size="14" text-anchor="middle">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="215" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd" font-family="Roboto" font-size="14" text-anchor="middle" aria-labelledby="unsynchronizedtitle unsynchronizeddesc">
+    <title id="unsynchronizedtitle">Four voices that stay out of sync</title>
+    <desc id="unsynchronizeddesc">A diagram representing four voices out of sync. They all sing the words of Amazing Grace, but they start and different times and end at different times</desc>
     <style>
         <![CDATA[.B{fill:#000}.C{stroke:none}.D{fill:#ddeeff}]]>
     </style>
@@ -140,7 +144,9 @@ come back into sync...
 
 ...no matter how many times you repeated.
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd" aria-labeledby="longunsynchronizedtitle longunsynchronizeddesc">
+    <title id="longunsynchronizedtitle">Four voices that stay out of sync no matter how long they repeat</title>
+    <desc id="longunsynchronizeddesc">A diagram representing four voices that are out of sync even after many repeats. They all sing the words of Amazing Grace, but they start at different times and trail off, many repeats later, never having come into sync.</desc>
     <style>
         <![CDATA[.Rgb6{fill:#ddffee}.VNq0{fill:#ddedf8}.oI77{fill:#eee8d5}.nvVo{fill:#fdf6e3}]]>
     </style>
@@ -208,14 +214,11 @@ If you take a line in a basic hymn meter, and sing it as a sequence of
 quarter notes, it takes up two measures. 
 
 ```lilypond
-\include "fasola.ily"
-isMajor = ##f
-pitch = a 
-\fasola c' { 
+\relative c'' { 
 \key c \major
 \partial 4
 \sacredHarpHeads
-la4 | La' La La8[ So] Fa4 | So So So8[ Fa] 
+a4 | e' e e8[ d] c4 | d d d8[ c] 
 }
 \addlyrics { In all my fears, _ in all my straits, _ }
 ```
@@ -230,35 +233,33 @@ simplest case, with the most basic rhythm, the first voice finishes
 when the second is only halfway done.
 
 ```lilypond
-\include "fasola.ily"
-isMajor = ##f
-pitch = a 
 \new ChoirStaff <<
 \new Staff = "tenor" {
-\fasola c' { 
+\relative c'' { 
 \key c \major
 \partial 4
 \sacredHarpHeads
-r4 | r2. la4 | La' La La8[ So] Fa4 | So So So8[ Fa] 
+r4 | r2. a4 | e' e e8[ d] c4 | d d d8[ c] 
 }
 \addlyrics { In all my fears, _ in all my straits, _ }
 }
 \new Staff = "bass" {
-\fasola c, { 
+\relative c { 
 \key c \major
 \clef bass
 \partial 4
 \sacredHarpHeads
-La4 | la la la8[ so] fa4 | La La La 
+e4 | a a a8[ g] f4 | e e e 
 }
-\addlyrics { In "all my fears, in all my straits," _}
+\addlyrics { In all my fears, _ in all my straits, _}
 }
 >>
 ```
 
 In colored blocks, they look like this:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightblue" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightblue" fill-rule="evenodd" aria-labeledby="b12-b23">
+    <desc id="b12-b23">A pair of blocks, each two measures long. They are offset by one measure.</desc>
     <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z"/>
 </svg>
 
@@ -273,15 +274,9 @@ One way is stretch out the voice that's ahead. Instead of straight
 quarter notes, give it longer ones.  Alternating quarter and dotted half notes is common.
 
 ```lilypond
-\paper{
-ragged-right = ##t
-}
-\include "fasola.ily"
-isMajor = ##f
-pitch = a 
 \new ChoirStaff <<
 \new Staff = "tenor" {
-\fasola c' { 
+\relative c'' { 
 \key c \major
 \partial 4
 \sacredHarpHeads
@@ -292,7 +287,7 @@ mi4 | Fa Fa Fa8[ mi] la[ Fa] | mi4 mi mi8[ la]
 My soul on his _ sal-- _ va -- tion waits. _ }
 }
 \new Staff = "bass" {
-\fasola c, { 
+\relative c { 
 \key c \major
 \clef bass
 \partial 4
@@ -308,14 +303,16 @@ My _ soul on his sal-- _ va -- tion waits. }
 
 In block terms: instead of this...
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd" aria-labeled="b12r34-b23r45">
+    <desc id="b12r34-b23r45">Two pairs of blocks, each two measures long, offset by one measure</desc>
     <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="lightblue"/>
     <path d="M109.5 34.5h100v25h-100zm50-30h100v25h-100z" class="lightred"/>
 </svg>
 
 ...our buddy Daniel Read decided to do this.
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd" aria-labeled="b12r35-b23r45">
+    <desc id="b12r35-b23r45">Two pairs of blocks offset by one measure. One block is stretched to three measures long, so they come back into sync in the end.</desc>
     <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100z" class="lightblue"/>
     <path d="M109.5 34.5h150v25h-150zm50-30h100v25h-100z" class="lightred"/>
 </svg>
@@ -324,15 +321,9 @@ Once he's done that, the two parts are gathered and ready to move
 forward in sync again.
 
 ```lilypond
-\paper{
-ragged-right = ##t
-}
-\include "fasola.ily"
-isMajor = ##f
-pitch = a 
 \new ChoirStaff <<
 \new Staff = "tenor" {
-\fasola c' { 
+\relative c'' { 
 \key c \major
 \partial 4
 \sacredHarpHeads
@@ -346,7 +337,7 @@ My soul on his _ sal-- _ va -- tion waits, _
 My soul }
 }
 \new Staff = "bass" {
-\fasola c, { 
+\relative c { 
 \key c \major
 \clef bass
 \partial 4
@@ -366,25 +357,22 @@ My soul }
 Another thing you can do with voices that are staggered by one...
 
 ```lilypond
-\include "fasola.ily"
-isMajor = ##t
-pitch = bf 
 \new ChoirStaff <<
 \new Staff = "tenor" {
-\fasola c' { 
-\key c \major
+\relative c'' { 
+\key bf \major
 \partial 4
 \sacredHarpHeads
-r4 | r2. Fa4 | La La La Fa | mi So So
+r4 | r2. bf4 | d d d bf | a c c
 }
 \addlyrics {The year of ju -- bi -- lee is come }
 }
 \new Staff = "bass" {
-\fasola c' { 
-\key c \major
+\relative c' { 
+\key bf \major
 \partial 4
 \sacredHarpHeads
-so4 | Fa Fa Fa so | la la la
+f4 | bf bf bf f | g g g
 }
 \addlyrics {The year of ju -- bi -- lee is come}
 }
@@ -394,27 +382,24 @@ so4 | Fa Fa Fa so | la la la
 ...is to make them swap places by letting the one that's behind repeat a line.
 
 ```lilypond
-\include "fasola.ily"
-isMajor = ##t
-pitch = bf 
 \new ChoirStaff <<
 \new Staff = "tenor" {
-\fasola c' { 
-\key c \major
+\relative c'' { 
+\key bf \major
 \partial 4
 \sacredHarpHeads
-r4 | r2. Fa4 | La La La Fa | mi So So
+r4 | r2. bf4 | d d d bf | a c c
 }
 \addlyrics {The year of ju -- bi -- lee is come }
 }
 \new Staff = "bass" {
-\fasola c' { 
-\key c \major
+\relative c' { 
+\key bf \major
 \partial 4
 \sacredHarpHeads
-so4 | Fa Fa Fa so | la la la 
+f4 | bf bf bf f | g g g
 \override NoteHead #'color = #red
-Fa | So So So La | Fa Fa Fa
+bf | c c c d | bf bf bf
 }
 \addlyrics {
 The year of ju -- bi -- lee is come
@@ -425,7 +410,8 @@ The year of ju -- bi -- lee is come
 >>
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightblue" fill-rule="evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" class="lightblue" fill-rule="evenodd" aria-labeled="b12b34-b23">
+    <desc id="b12b34-b23">A two-measure block that's repeated in the bottom voice, and sung only once in the top voice. They are staggered so that the bottom voice starts one measure early and finishes one measure late</desc>
     <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100zm55 30h100v25h-100z"/>
 </svg>
 
@@ -434,39 +420,41 @@ Now you could slow down the higher line instead of the lower one.
 
 
 ```lilypond
-\include "fasola.ily"
-isMajor = ##t
-pitch = bf 
 \new ChoirStaff <<
 \new Staff = "tenor" {
-\fasola c' { 
-\key c \major
+\relative c'' { 
+\key bf \major
 \partial 4
 \sacredHarpHeads
-r4 | r2. Fa4 | La La La Fa | mi So So
+r4 | r2. bf4 | d d d bf | a c c
 \override NoteHead #'color = #red
-Fa | La2. La4 | Fa2. Fa4 | mi2. mi4 | Fa2.
-}
-\addlyrics {The year of ju -- bi -- lee is come,
-Re -- turn, ye ran -- somed sin -- ners, home. }
-}
-\new Staff = "bass" {
-\fasola c' { 
-\key c \major
-\partial 4
-\sacredHarpHeads
-so4 | Fa Fa Fa so | la la la 
-Fa | So So So La | Fa Fa Fa \bar""\break
-so | la la la Fa | So2. mi4 | Fa2.
+bf | d2. d4 | bf2. bf4 | a2. a4 | bf2.
 }
 \addlyrics {
-The year of ju -- bi -- lee is come
-The year of ju -- bi -- lee is come
-Re -- turn, ye ran -- somed sin -- ners, home. }
+The year of ju -- bi -- lee is come,
+Re -- turn, ye ran -- somed sin -- ners, home!
+}
+}
+\new Staff = "bass" {
+\relative c' { 
+\key bf \major
+\partial 4
+\sacredHarpHeads
+f4 | bf bf bf f | g g g
+bf | c c c d | bf bf bf
+f | g g g bf | c2. a4 | bf2.
+}
+\addlyrics {
+The year of ju -- bi -- lee is come,
+The year of ju -- bi -- lee is come,
+Re -- turn, ye ran -- somed sin -- ners, home!
+}
 }
 >>
 ```
-<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="65" viewBox="0 0 464 65" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd" aria-labeled="b12b34r56-b23r46">
+    <desc id="b12b34r56-b23r46">Like in the previous example, the lower voice repeats a two-measure block, so that it is behind instead of ahead. Then, the upper voice stretches a a block out to three measures. Now, they are in sync.</desc>
     <path d="M4.5 34.5h100v25H4.5zm50-30h100v25h-100zm55 30h100v25h-100z" class="lightblue"/>
     <path d="M159.5 4.5h155v25h-155zm55 30h100v25h-100z" class="lightred"/>
 </svg>
@@ -478,25 +466,22 @@ do. Repeating a line in the one that's behind will now gather them together
 instead of swapping them.
 
 ```lilypond
-\include "fasola.ily"
-isMajor = ##f
-pitch = a
 \new ChoirStaff <<
 \new Staff = "treble" {
-\fasola c' { 
+\relative c'' { 
 \key c \major
 \partial 4
 \sacredHarpHeads
-r4 | r1 | r2. mi4 | La La La fa | La La La
+r4 | r1 | r2. b4 | e e e f | e e e
 }
 \addlyrics { Where na -- ture all in ru -- in lies, }
 }
 \new Staff = "tenor" {
-\fasola c' { 
+\relative c'' { 
 \key c \major
 \partial 4
 \sacredHarpHeads
-la4 | La' La La fa8[ La] | So4 So So So | Fa Fa Fa So8[ Fa] | mi4 mi mi
+a4 | e' e e f8[ e] | d4 d d d | c c c d8[ c] | b4 b b
 }
 \addlyrics { 
 Where na -- ture all in _ ru -- in lies, 
@@ -512,26 +497,23 @@ Where na -- ture all in _ ru -- in lies, }
 Stretching still works too. You just have to stretch _harder._ 
 
 ```lilypond
-\include "fasola.ily"
-isMajor = ##t
-pitch = f
 \new ChoirStaff <<
 \new Staff = "treble" {
-\fasola c' { 
-\key c \major
+\relative c'' { 
+\key f \major
 \partial 4
 \sacredHarpHeads
-r4 | r1 | r2. La4 | so so so so | la mi Fa2~ | Fa2.
+r4 | r1 | r2. a4 | c c c c | d c f2~ | f2. 
 }
 \addlyrics { ’Tis grace di -- vine, all -- conq’r -- ing, free, }
 }
 \new Staff = "tenor" {
-\fasola c { 
-\key c \major
+\relative c { 
+\key f \major
 \partial 4
 \sacredHarpHeads
 \clef bass
-so4 | Fa Fa Fa Fa | so2. so4 | Fa1( | So2 so, | Fa2.)
+c4 | f f f f | c2. c4 | f1( | g2 c, | f2.)
 }
 \addlyrics { ’Tis grace di -- vine, all -- conq’r -- ing, free, }
 }
@@ -554,12 +536,6 @@ In another sense, this is completely missing the point. Lining bricks up isn't
 composing. It isn't even the _rhythmic_ part of composing. If I've got these two measures...
 
 ```lilypond
-\paper{
-ragged-right = ##t
-}
-\include "fasola.ily"
-isMajor = ##f
-pitch = c 
 \relative c'' { 
 \key c \major
 \sacredHarpHeads
@@ -574,12 +550,6 @@ I could decorate them in any of these ways or
 dozens of others. 
 
 ```lilypond
-\paper{
-ragged-right = ##t
-}
-\include "fasola.ily"
-isMajor = ##f
-pitch = c 
 \relative c'' { 
 \key c \major
 \sacredHarpHeads
@@ -590,12 +560,6 @@ c4 | c4 c c e | g e c2~ | c1~ | c2.
 ```
 
 ```lilypond
-\paper{
-ragged-right = ##t
-}
-\include "fasola.ily"
-isMajor = ##f
-pitch = c 
 \relative c'' { 
 \key c \major
 \sacredHarpHeads
@@ -606,12 +570,6 @@ c4 | c2. c4 | c( d e) f | g( f e ) d | c2.
 ```
 
 ```lilypond
-\paper{
-ragged-right = ##t
-}
-\include "fasola.ily"
-isMajor = ##f
-pitch = c 
 \relative c'' { 
 \key c \major
 \sacredHarpHeads

@@ -15,19 +15,25 @@ permalink: index.html
       {% assign series = site.data.series | where: "id", post.series | first %}
       <li>
         Series on <em>{{ series.topic }}</em>
+        <ul class="navlist sublist">
         {% assign reverse_posts = site.posts | reverse %}
         {% for other in reverse_posts %}
           {% if other.series == post.series %}
+            <li>
             {% assign poststamp = other.date | date: '%s' | plus: 0 %}
             {% assign nowstamp = 'now' | date: '%s' %}
             {% assign thenstamp = nowstamp | minus: newness %}
-            —
             {% if poststamp > thenstamp %}
-                <strong>New</strong>
+              <a href="{{ other.url }}">{{ other.title }}
+                <span class="datepill">{{ other.date | date: '%b %-d' }}</span>
+              </a>
+            {% else %}
+              <a href="{{ other.url }}">{{ other.title }}</a>
             {% endif %}
-            <a href="{{ other.url }}">{{ other.title }}</a>
+            </li>
           {% endif %} 
         {% endfor %}
+        </ul>
       </li>
     {% endunless %}
   {% else %}
@@ -35,20 +41,14 @@ permalink: index.html
   {% assign nowstamp = 'now' | date: '%s' %}
   {% assign thenstamp = nowstamp | minus: newness %}
   <li>
-      {% if poststamp > thenstamp %}
-                <strong>New</strong>
-            {% endif %}
+    {% if poststamp > thenstamp %}
+      <a href="{{ post.url }}">{{ post.title }}
+        <span class="datepill">{{ post.date | date: '%b %-d' }}</span>
+      </a>
+    {% else %}
       <a href="{{ post.url }}">{{ post.title }}</a>
+    {% endif %}
   {% endif %}
   </li>
 {% endfor %}
-</ul>
-
-<h1>Projects</h1>
-<ul class="navlist">
-  {% for project in site.projects %}
-  <li>
-      <a href="{{ project.url }}">{{ project.title }}</a> — {{ project.tagline }}
-  </li>
-  {% endfor %}
 </ul>

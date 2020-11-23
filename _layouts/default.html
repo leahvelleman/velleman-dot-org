@@ -17,6 +17,22 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/30adb36664.js" crossorigin="anonymous"></script>
+    <script type="text/javascript> <!-- this isn't working -->
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
     <script>
         lightbox.option({
             'fadeDuration': 0,
@@ -26,40 +42,55 @@
     </script>
   </head>
   <body>
+    <div id="skiptocontent"><a href="#maincontent">Skip to main content</a></div>
     <div class="wrapper">
       <header>
         <h1 class="name"><a href="{% link index.html %}">Mx. Leah Velleman</a></h1>
-        <p>Coder, linguist, singer, occasional blogger. See my <a href="{{ site.github.owner_url }}">Github profile</a>
-           or my <a href="/assets/velleman_resume.pdf">résumé</a> and <a href="/resume.html">how I build it</a>.</p>
+        <p>Coder, linguist, singer, occasional blogger. See <a href="{{ site.github.owner_url }}">my Github profile</a>
+           or <a href="/assets/velleman_resume.pdf">my résumé</a> and <a href="/resume.html">how I build it</a>.</p>
+        <nav aria-label="Primary Navigation">
           <ul class="navlist">
               {% if page.permalink == 'index.html' %} 
-                <li class='current'>Posts and projects</li>
+                <li class='current'>Posts</li>
               {% else %}
-                <li><a href="{% link index.html %}">Posts and projects</a></li>
+                <li><a href="{% link index.html %}">Posts</a></li>
               {% endif %}
-              {% if page.layout == 'post' or page.layout == 'project' %}
+              {% if page.layout == 'post' %}
                 <li class='current subhead'>{{ page.title }}</li>
               {% endif %}
+
+              {% if page.permalink == 'projects.html' %} 
+                <li class='current'>Projects</li>
+              {% else %}
+                <li><a href="{% link projects.html %}">Projects</a></li>
+              {% endif %}
+              {% if page.layout == 'project' %}
+                <li class='current subhead'>{{ page.title }}</li>
+              {% endif %}
+
               {% if page.permalink == 'publications.html' %} 
                 <li class='current'>Publications</li>
               {% else %}
                 <li><a href="{% link publications.md %}">Publications</a></li>
               {% endif %}
+
               {% if page.permalink == 'elsewhere.html' %} 
                 <li class='current'>Find me elsewhere</li>
               {% else %}
                 <li><a href="{% link elsewhere.md %}">Find me elsewhere</a></li>
               {% endif %}
+
               {% if page.permalink == 'mx.html' %} 
                 <li class='current'>Why I use Mx.</li>
               {% else %}
                 <li><a href="{% link mx.md %}">Why I use Mx.</a></li>
               {% endif %}
           </ul>
+        </nav>
       </header>
-      <section>
+      <main id="maincontent">
         {{ content }}
-      </section>
+      </main>
       <footer>
         <a href="{% link feed.xml %}">Subscribe</a> | <a href="mailto:leahvelleman@gmail.com">Email</a> 
       </footer>

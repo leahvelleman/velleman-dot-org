@@ -18,15 +18,15 @@ layout: default
 {%- if series-posts.size > 0 -%}
 <div class="admonition">
   {%- if series-posts.size == 1 -%}
-  <h4>This post is the beginning of a series</h4>
+  <p>This post is the beginning of a series on <em>{{ series-topic }}</em></p>
   <p>More posts coming soon!</p>
   {%- else -%}
-  <h4>This post is part of a series</h4>
+  <p>This post is part of a series on <em>{{ series-topic }}</em></p>
   <ol>
     {%- for post in series-posts -%}
     <li>
       {%- if post.url == page.url -%}
-      <strong>{{ post.title }}</strong>
+      <span class="current">{{ post.title }}</span>
       {%- else -%}
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       {%- endif -%}
@@ -41,24 +41,18 @@ layout: default
   {{ content }}
 
   {%- if series-posts.size > 1 -%}
-  <div class="admonition">
-      <h4>This post is part of a series on <em>{{ series-topic }}.</em></h4>
     {%- for post in series-posts -%}
-      {%- if prev_post_index == forloop.index -%}
-          <a class="prev" href="{{ site.baseurl }}{{ post.url }}">&laquo; {{ post.title }}</a>
-      {%- endif -%}
       {%- if next_post_index == forloop.index -%}
-      <a class="next" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} &raquo;</a>
+      Next in series: <a class="next" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} &raquo;</a>
       {%- endif -%}
     {%- endfor -%}
-  </div>
-  {%- else -%}
+{%- else -%}
   {%- if page.previous.url -%}
-    <a class="prev" style="float: left;" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
       {%- endif -%}
   {%- if page.next.url -%}
-    <a class="next" style="float: right;" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+    <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
   {%- endif -%}
-  {%- endif -%}
+{%- endif -%}
 </div>
 </div>

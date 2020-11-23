@@ -6,7 +6,7 @@ permalink: publications.html
 
 ## Pop science
 
-<ul class="navlist">
+<ul>
 <li><a class="reference external"
 href="http://www.slate.com/blogs/lexicon_valley/2014/10/30/ghostbusters_and_at_issue_ness_the_hidden_rules_of_conversation.html">What
 Ghostbusters tells us about the hidden rules of conversation.</a> In <i>Slate,</i> 30 Oct
@@ -37,7 +37,7 @@ science behind it, aimed at undergraduates.
     <p>It is never, in any context, correct to call me "he." </p>
 </div>
 
-<ul class="navlist">
+<ul>
 <li> Leah Velleman 2014. <a href="{% link publications/dissertation.pdf
 %}"><i>Focus and movement in a variety of K'ichee'</i></a>. Ph.D. dissertation,
 University of Texas, Austin.</li>

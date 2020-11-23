@@ -1,12 +1,10 @@
 ---
-layout: default
+layout: page
 title: Elsewhere
 permalink: elsewhere.html
 ---
 
-# Elsewhere
-
-As of {{ page.path | file_date | date_to_string }} when I last updated this file, you can 
+As of when I last updated this file, you can 
 find me:
 - By email at `leahvelleman@gmail.com`
 - On Twitter at <a href="https://www.twitter.com/leahvelleman">@leahvelleman</a>
