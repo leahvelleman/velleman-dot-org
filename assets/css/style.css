@@ -174,8 +174,6 @@ th { color: var(--primary); }
 
 .navlist .sublist { padding-left: 26px; margin-bottom: 8px; }
 
-.current.subhead { padding-left: 26px; }
-
 .prev {float: left; }
 .next {float: right; }
 

@@ -51,37 +51,43 @@ window.onclick = function(event) {
         <nav aria-label="Primary Navigation">
           <ul class="navlist">
               {% if page.permalink == 'index.html' %} 
-                <li class='current'>Posts</li>
+                <li class='current' aria-current='page'>Posts</li>
+              {% elsif page.layout == 'post' %}
+                <li class='current'><a href="{% link index.html %}" aria-current='true'>Posts</a>
+                  <ul class="navlist sublist">
+                    <li class='current' aria-current="page">{{ page.title }}</li>
+                  </ul>
+                </li>
               {% else %}
                 <li><a href="{% link index.html %}">Posts</a></li>
               {% endif %}
-              {% if page.layout == 'post' %}
-                <li class='current subhead'>{{ page.title }}</li>
-              {% endif %}
 
               {% if page.permalink == 'projects.html' %} 
-                <li class='current'>Projects</li>
+                <li class='current' aria-current='page'>Projects</li>
+              {% elsif page.layout == 'project' %}
+                <li class='current'><a href="{% link projects.html %}" aria-current='true'>Projects</a>
+                  <ul class="navlist sublist">
+                    <li class='current' aria-current="page">{{ page.title }}</li>
+                  </ul>
+                </li>
               {% else %}
                 <li><a href="{% link projects.html %}">Projects</a></li>
               {% endif %}
-              {% if page.layout == 'project' %}
-                <li class='current subhead'>{{ page.title }}</li>
-              {% endif %}
 
               {% if page.permalink == 'publications.html' %} 
-                <li class='current'>Publications</li>
+                <li class='current' aria-current='true'>Publications</li>
               {% else %}
                 <li><a href="{% link publications.md %}">Publications</a></li>
               {% endif %}
 
               {% if page.permalink == 'elsewhere.html' %} 
-                <li class='current'>Find me elsewhere</li>
+                <li class='current' aria-current='true'>Find me elsewhere</li>
               {% else %}
                 <li><a href="{% link elsewhere.md %}">Find me elsewhere</a></li>
               {% endif %}
 
               {% if page.permalink == 'mx.html' %} 
-                <li class='current'>Why I use Mx.</li>
+                <li class='current' aria-current='true'>Why I use Mx.</li>
               {% else %}
                 <li><a href="{% link mx.md %}">Why I use Mx.</a></li>
               {% endif %}
