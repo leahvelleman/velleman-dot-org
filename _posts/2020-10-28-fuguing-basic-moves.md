@@ -266,7 +266,7 @@ In colored blocks, they look like this:
 Let's make up a term and say those voices are _staggered_. If two voices
 aren't staggered anymore, let's say they're _gathered_.
 
-## Staggered by one
+### Staggered by one
 
 So how do you gather voices that are staggered by one measure?
 
@@ -459,7 +459,7 @@ Re -- turn, ye ran -- somed sin -- ners, home!
     <path d="M159.5 4.5h155v25h-155zm55 30h100v25h-100z" class="lightred"/>
 </svg>
 
-## Staggered by two
+### Staggered by two
 
 When voices are staggered by two measures, there's an extra thing you can
 do. Repeating a line in the one that's behind will now gather them together
