@@ -49,7 +49,7 @@ code {
 .highlight code { padding: 0; }
 
 /* Block elements */
-ul, ol, table, dl, div.admonition, div.highlight, div.music { 
+ul, ol, table, dl, div.admonition, .highlight, div.music { 
   max-width: 33em; margin: 1.5em 0 1.5em; 
 } 
 ul.biblio { list-style: none; padding-left: 2em; }
@@ -73,7 +73,7 @@ th { color: var(--primary); }
 
 
 /* Outer container for scores and highlighted code: */
-div.highlight, div.music { 
+div.highlight, figure.highlight, div.music { 
   padding: 0em; 
   overflow: auto;
   border: 1px solid var(--border); 
@@ -83,7 +83,7 @@ div.highlight, div.music {
 
 
 /* Inner container for scores and highlighted code */
-pre.highlight, div.score {
+div.highlight pre, figure.highlight pre, div.score {
   padding: 8px;
   margin: 0;
   width: auto;
@@ -101,8 +101,8 @@ div.score img { width: auto; max-width: none; margin: 0; }
 
 /* Highlighted blocks have a distinctive background color, and the code within 
  * inherits that color and has no border. */
-div.highlight { background-color: var(--bright-background); }
-div.highlight code { background-color: inherit; border: none; }
+.highlight { background-color: var(--bright-background); }
+.highlight code { background-color: inherit; border: none; }
 
 
 

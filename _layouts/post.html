@@ -46,18 +46,18 @@ layout: default
 </div>
 
 <div class="meta bottommeta" style="overflow: auto;">
-    {%- if page.previous.url -%}
-    <span style="float: left;"><a class="next" href="{{page.previous.url}}">Previous post</a></span>
-    {%- endif -%}
     {%- if series-posts.size > 1 -%}
       {%- for post in series-posts -%}
         {%- if next_post_index == forloop.index -%}
-        <span style="float: right;"><a class="next" href="{{ site.baseurl }}{{ post.url }}">Next in this series</a></span>
+        <span style="float: right;;"><a class="next" href="{{ site.baseurl }}{{ post.url }}">Next in this series</a></span>
         {%- endif -%}
       {%- endfor -%}
-  {%- endif -%}
+    {%- endif -%}
+    {%- if page.previous.url -%}
+    <span style="float: left; clear: right;"><a class="next" href="{{page.previous.url}}">Previous post</a></span>
+    {%- endif -%}
     {%- if page.next.url -%}
-    <span style="float: right;"><a class="next" href="{{page.next.url}}">Next post</a></span>
+    <span style="float: right; clear: right;"><a class="next" href="{{page.next.url}}">Next post</a></span>
     {%- endif -%}
    <div style="clear: both;"></div>
 </div>

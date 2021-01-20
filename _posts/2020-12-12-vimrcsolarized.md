@@ -126,11 +126,10 @@ using Tmux commands.
 To support this, I've **restyled nearly everything else** to make **background
 color immediately legible.** 
 
-This means that when I look at a screen region, its reachability is the
-first thing I notice, before I even focus my eyes to read a word of
-text. And when I'm working in one region, I can tell what other regions
-my actions might affect without looking away, just by their color in my
-peripheral vision. 
+This means that when I look at a screen region, its reachability is the first
+thing I notice, before I even focus my eyes to read a word of text. And when
+I'm working in one region, I can tell what other regions my actions might
+affect without looking away, just by their color in my peripheral vision. 
 
 
 ## The details
