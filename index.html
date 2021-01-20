@@ -2,21 +2,20 @@
 layout: default
 permalink: index.html
 ---
-
 <h1>Posts</h1>
 {% assign series_shown = "" | split: "|" %}
-{% assign newness = 10000000 %}
-<ul class="navlist">
+{% assign newness = 7776000 %}
+<ul class="postlist">
 {% assign posts = site.posts | where: "draft", false %}
 {% for post in posts %}
   {% if post.series %}
     {% unless series_shown contains post.series %}
       {% assign series_shown = series_shown | push: post.series %}
       {% assign series = site.data.series | where: "id", post.series | first %}
-      <li>
+      <li class="category">
         Series on <em>{{ series.topic }}</em>
-        <ul class="navlist sublist">
-        {% assign reverse_posts = site.posts | reverse %}
+        <ol class="postlist series-posts">
+        {% assign reverse_posts = site.posts | where: "draft", false | reverse %}
         {% for other in reverse_posts %}
           {% if other.series == post.series %}
             <li>
@@ -33,7 +32,7 @@ permalink: index.html
             </li>
           {% endif %} 
         {% endfor %}
-        </ul>
+        </ol>
       </li>
     {% endunless %}
   {% else %}

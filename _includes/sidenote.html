@@ -1,0 +1,10 @@
+{%- if include.n -%}
+  <sup class="sidenote-widget"><a href="#{{ include.id }}" id="{{ include.id }}backref">{{ include.n }}</a></sup>
+{%- endif -%}
+<span class="aside">
+  {%- if include.n -%}
+    <a id="{{ include.id }}"/><sup class="sidenote-widget">{{ include.n }}&nbsp;</sup>
+  {%- endif -%}
+  {{- include.text -}}
+  <a class="sidenote-widget backref" href="#{{ include.id }}backref">↩</a>
+</span>

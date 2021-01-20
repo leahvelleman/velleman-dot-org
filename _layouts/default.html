@@ -1,3 +1,4 @@
+{% assign ref = 0 %}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -18,21 +19,21 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/30adb36664.js" crossorigin="anonymous"></script>
-    <script type="text/javascript> <!-- this isn't working -->
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+    <script type="text/javascript">
+      function fns() {
+        var elem = document.getElementById("contents");
+        var button = document.getElementById("contentsbutton")
+        var header = document.getElementById("header")
+        if (elem.style.display == "none") {
+          elem.style.display = "block";
+          header.classList.add("active")
+        } else {
+          elem.style.display = "none";
+          header.classList.remove("active")
+        }
+
       }
-    }
-  }
-}
-</script>
+    </script>
     <script>
         lightbox.option({
             'fadeDuration': 0,
@@ -45,60 +46,22 @@ window.onclick = function(event) {
     <div id="skiptocontent"><a href="#maincontent">Skip to main content</a></div>
     <div class="wrapper">
       <header>
-        <h1 class="name"><a href="{% link index.html %}">Mx. Leah Velleman</a></h1>
-        <p>Coder, linguist, singer, occasional blogger. See <a href="{{ site.github.owner_url }}">my Github profile</a>
-           or <a href="/assets/velleman_resume.pdf">my résumé</a> and <a href="/resume.html">how I build it</a>.</p>
-        <nav aria-label="Primary Navigation">
-          <ul class="navlist">
-              {% if page.permalink == 'index.html' %} 
-                <li class='current' aria-current='page'>Posts</li>
-              {% elsif page.layout == 'post' %}
-                <li class='current'><a href="{% link index.html %}" aria-current='true'>Posts</a>
-                  <ul class="navlist sublist">
-                    <li class='current' aria-current="page">{{ page.title }}</li>
-                  </ul>
-                </li>
-              {% else %}
-                <li><a href="{% link index.html %}">Posts</a></li>
-              {% endif %}
-
-              {% if page.permalink == 'projects.html' %} 
-                <li class='current' aria-current='page'>Projects</li>
-              {% elsif page.layout == 'project' %}
-                <li class='current'><a href="{% link projects.html %}" aria-current='true'>Projects</a>
-                  <ul class="navlist sublist">
-                    <li class='current' aria-current="page">{{ page.title }}</li>
-                  </ul>
-                </li>
-              {% else %}
-                <li><a href="{% link projects.html %}">Projects</a></li>
-              {% endif %}
-
-              {% if page.permalink == 'publications.html' %} 
-                <li class='current' aria-current='true'>Publications</li>
-              {% else %}
-                <li><a href="{% link publications.md %}">Publications</a></li>
-              {% endif %}
-
-              {% if page.permalink == 'elsewhere.html' %} 
-                <li class='current' aria-current='true'>Find me elsewhere</li>
-              {% else %}
-                <li><a href="{% link elsewhere.md %}">Find me elsewhere</a></li>
-              {% endif %}
-
-              {% if page.permalink == 'mx.html' %} 
-                <li class='current' aria-current='true'>Why I use Mx.</li>
-              {% else %}
-                <li><a href="{% link mx.md %}">Why I use Mx.</a></li>
-              {% endif %}
-          </ul>
-        </nav>
+        <span style="float: right;">
+          <a href="/index.html" class="{% if page.url == '/index.html' %}active{% endif %}">Blog</a> 
+          &nbsp; 
+          <a href="/publications.html" class="{% if page.url == '/publications.html' %}active{% endif %}">Linguistics</a>
+          &nbsp; 
+          <a href="/about/" class="{% if page.url == '/about/' %}active{% endif %} emph">Hire me!</a> 
+        </span>
+        <span style="float: left;"><a href="/">Leah Velleman</a></span>
+      <div style="clear: both;"></div>
       </header>
+
       <main id="maincontent">
         {{ content }}
       </main>
       <footer>
-        <a href="{% link feed.xml %}">Subscribe</a> | <a href="mailto:leahvelleman@gmail.com">Email</a> 
+        <a>Github</a> &nbsp; <a>Twitter</a> &nbsp; <a>Email</a> &nbsp; <a>Résumé</a> &nbsp; <a>Subscribe</a>
       </footer>
     </div>
   </body>

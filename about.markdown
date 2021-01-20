@@ -1,18 +1,18 @@
 ---
-layout: post
-title: About
+layout: default
+title: I make documentation better.
 permalink: /about/
 ---
+<h1>I make documentation better.</h1>
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+As a coder, I help writers get stuff done. I keep their XML clean, their terminology
+managed, their spelling checked, and their bosses happy with stats and queries so
+they can concentrate on readers.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+As an editor, I help writers say what they mean. Sure, I can check your grammar.
+But when you get down to it, grammar and style are just bags of tools. The real goal
+is clarity. I have a Ph.D. in clarity. 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+My position on the Oxford comma is "Let's find out what your readers need."
 
-
-[jekyll-organization]: https://github.com/jekyll
+<h1>You should probably hire me.</h1>

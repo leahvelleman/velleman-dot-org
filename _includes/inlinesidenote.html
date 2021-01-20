@@ -1,0 +1,20 @@
+{% assign ref = ref | plus:1 %}
+{%- if include.punct -%}
+  <span class="sidenote-widget">{{ include.punct }}</span>
+{%- endif -%}
+<sup class="sidenote-widget">
+  <a href="#{{ include.id }}" id="{{ include.id }}backref">{{ ref }}</a>
+</sup>
+<span class="asidecondtainer">
+  <span class="inline-aside">
+    {%- if include.n %}
+      <a id="{{ include.id }}"/><sup class="sidenote-widget">{{ ref }}</sup>
+    {% endif -%}
+    <span class="sidenote-outside-only">{{ include.text | capitalize }}</span>
+    <span class="sidenote-inline-only sidenote-box">{{ include.text }}</span>
+    {%- if include.punct -%}
+      <span class="sidenote-inline-only">{{ include.punct }}</span>
+    {%- endif -%}
+    <a class="sidenote-widget backref" href="#{{ include.id }}backref">↩</a>
+  </span>
+</span>

@@ -3,7 +3,7 @@ layout: default
 ---
 {%- if page.series -%}
   {%- assign series-topic = site.data.series | where: 'id', page.series | map: 'topic' | first -%}
-  {%- assign series-posts = site.posts | reverse | where: 'series', page.series -%}
+  {%- assign series-posts = site.posts | reverse | where: "draft", false | where: 'series', page.series -%}
   {%- for post in series-posts -%}
     {%- if post.url == page.url -%}
       {%- assign prev_post_index = forloop.index | minus: 1 -%}
@@ -13,46 +13,51 @@ layout: default
   {%- endfor -%}
 {%- endif -%}
 
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
-{%- if series-posts.size > 0 -%}
-<div class="admonition">
-  {%- if series-posts.size == 1 -%}
-  <p>This post is the beginning of a series on <em>{{ series-topic }}</em></p>
-  <p>More posts coming soon!</p>
+<h1>{%- if series-posts.size > 0 -%}{{ series-topic | capitalize }}:{%- endif %} {{ page.title }}</h1>
+<div class="meta topmeta">
+  {%- if page.draft -%}
+    This is a draft — please don't share
   {%- else -%}
-  <p>This post is part of a series on <em>{{ series-topic }}</em></p>
-  <ol>
-    {%- for post in series-posts -%}
-    <li>
-      {%- if post.url == page.url -%}
-      <span class="current">{{ post.title }}</span>
+    <p class="date">{{ page.date | date_to_string }}</p>
+    {%- if series-posts.size > 0 -%}
+      {%- if series-posts.size == 1 -%}
+      <p>This post is the beginning of a series on <em>{{ series-topic }}</em>. More posts coming soon!</p>
       {%- else -%}
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      This post is part of a series on {{ series-topic }}.
+        <ol class="series-posts">
+          {%- for post in series-posts -%}
+            <li
+              {%- if post.url == page.url %}
+                class="current"
+              {%- endif -%}
+              ><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ol>
+        <p class="series-blurb">{{ page.seriesblurb }}</p>
       {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ol>
+      <hr>
+    {%- endif -%}
   {%- endif -%}
 </div>
-{%- endif -%}
 
 <div class="post">
   {{ content }}
-
-  {%- if series-posts.size > 1 -%}
-    {%- for post in series-posts -%}
-      {%- if next_post_index == forloop.index -%}
-      Next in series: <a class="next" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} &raquo;</a>
-      {%- endif -%}
-    {%- endfor -%}
-{%- else -%}
-  {%- if page.previous.url -%}
-    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-      {%- endif -%}
-  {%- if page.next.url -%}
-    <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-  {%- endif -%}
-{%- endif -%}
 </div>
+
+<div class="meta bottommeta" style="overflow: auto;">
+    {%- if page.previous.url -%}
+    <span style="float: left;"><a class="next" href="{{page.previous.url}}">Previous post</a></span>
+    {%- endif -%}
+    {%- if series-posts.size > 1 -%}
+      {%- for post in series-posts -%}
+        {%- if next_post_index == forloop.index -%}
+        <span style="float: right;"><a class="next" href="{{ site.baseurl }}{{ post.url }}">Next in this series</a></span>
+        {%- endif -%}
+      {%- endfor -%}
+  {%- endif -%}
+    {%- if page.next.url -%}
+    <span style="float: right;"><a class="next" href="{{page.next.url}}">Next post</a></span>
+    {%- endif -%}
+   <div style="clear: both;"></div>
 </div>

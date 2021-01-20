@@ -22,7 +22,7 @@ title: Leah Velleman
 email: leahvelleman@gmail.com
 description: Developer, linguist, documentation nerd
 baseurl: "" # the subpath of your site, e.g. /blog
-url: http://www.velleman.org/ # the base hostname & protocol for your site, e.g. http://example.com
+url: http://www.velleman.org # the base hostname & protocol for your site, e.g. http://example.com
 show_downloads: false
 logo: assets/laceautomata_neighborhood.png
 social:
@@ -30,6 +30,13 @@ social:
     links:
         - https://twitter.com/leahvelleman
         - https://github.com/leahvelleman
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /assets/laceautomata_neighborhood.png
 
 # Build settings
 permalink: /:slug.html
@@ -43,6 +50,8 @@ plugins:
 exclude: ['lily_images']
 
 lilypond-image-format: svg
+
+highlighter: rouge
 
 twitter:
     username: leahvelleman

@@ -2,6 +2,8 @@
 title: Basic moves
 series: fuguing
 layout: post
+description: Beginning of a series on Sacred Harp guguing tunes — how composers get voices into sync
+image: /assets/images/jubilee.png
 ---
 
 In [Sacred Harp singing,](https://en.wikipedia.org/wiki/Sacred_Harp) a

@@ -1,46 +1,60 @@
 ---
 layout: page
-title: Publications
+title: Linguistics
 permalink: publications.html
 ---
 
-## Pop science
 
-<ul>
-<li><a class="reference external"
-href="http://www.slate.com/blogs/lexicon_valley/2014/10/30/ghostbusters_and_at_issue_ness_the_hidden_rules_of_conversation.html">What
-Ghostbusters tells us about the hidden rules of conversation.</a> In <i>Slate,</i> 30 Oct
-2014.</li> 
-<li><a class="reference external"
-href="http://www.slate.com/blogs/lexicon_valley/2014/08/26/geocentric_direction_systems_use_uphill_uptown_instead_of_north_south_found.html">When
-“north” isn’t actually north.</a> In <i>Slate,</i> 26 Aug 2014.</li>
-</ul>
+Before I worked in software, I got a Ph.D. in linguistics. 
 
-## Tech writing
+My team believed that curiosity drives conversations. When people interact, we
+get curious about things together. And when one of us says something, we
+signal with our grammar and tone of voice how it's connected to the things
+the others are curious about — what questions of theirs it answers, what
+questions it raises.
+That's how we connect the things we say to each other's goals and interests.
 
-In grad school I wrote <a href="{% link publications/shalmaneser.pdf %}">Getting Started with
-Shalmaneser</a> — an introductory manual for a shallow semantic parser and explanation of the
-science behind it, aimed at undergraduates.
+Studying this stuff is, no exaggeration, why I'm a good editor.
+Clear writing happens when you connect to your readers' goals and
+interests. Every language gives you tools of grammar and style for making
+that connection. Really good editing is teaching people to use those tools.
 
-## Research
+<hr>
 
-<div class="admonition">
-    <p>I've published linguistic research under my current name and, previously,
-    as Dan Bridges Velleman. (But I'm not <a
-    href="https://www.amherst.edu/people/facstaff/djvelleman">Daniel J.
-    Velleman, the logician</a>.) Mostly I worked on the ways speakers of
-    different languages make their conversational goals clear to each other.</p>
+I worked on information structure (that's the fancy name for this stuff) in a
+few languages: English and French with David Beaver's research group at the
+University of Texas, and the Maya language K'ichee' with Nora England's
+research group. Put plainly, my dissertation is on how K'ichee' speakers signal
+what information answers a question. Because grammar and speakers' goals
+are connected, the answer sheds some light on the grammar of Mayan languages. {%- include
+sidenote.html n="1" text="For linguists: I worked on focus movement, which is
+required for foci in some syntactic positions and optional for foci in others.
+This follows an ergative pattern paralelling the ergative extraction
+asymmetries already known in Mayan languages, and there is evidence the pattern
+holds throughout the Mayan family, with languages that have an ergative
+extraction asymmetry also having an ergative pattern of optional focus
+marking." %} 
 
-    <p>I strongly prefer to be referred to using my real name even in discussions of
-    my past work.</p>
+I also won some grants, gave a lot of presentations, taught some linguists how to program and some
+programmers how to think about language, and had a lot of fun traveling around
+Guatemala (where K'ichee' is spoken) in the backs of pickup trucks.
 
-    <p>It is never, in any context, correct to call me "he." </p>
-</div>
 
-<ul>
+
+## Publications
+
+_Some of these works were originally published under a pen name. I have cited them here
+with my real legal name, which is how I wish for them to be cited going forward._
+
+### Dissertation
+<ul class="biblio">
 <li> Leah Velleman 2014. <a href="{% link publications/dissertation.pdf
 %}"><i>Focus and movement in a variety of K'ichee'</i></a>. Ph.D. dissertation,
 University of Texas, Austin.</li>
+</ul>
+
+### Chapters and articles
+<ul class="biblio">
 <li> Leah Velleman and David Beaver 2015. "Question-based models of information
   structure."  In <i>The Oxford Handbook of Information Structure</i> (Ed. Caroline
   Féry and Shinichiro Ishihara), Oxford University Press, 86–107.</li>
@@ -48,9 +62,6 @@ University of Texas, Austin.</li>
   David Beaver 2015. “A cross-linguistic study of the non-at-issueness of
   exhaustive inferences.” In <i>Experimental Perspectives on Presuppositions</i>
   (Ed. Florian Schwarz), Springer International, 135-156.</li>
-<li>Leah Velleman 2014. "On optional focus movement in K'ichee'."
-  <a href="http://semarch.linguistics.fas.nyu.edu/Archive/2FkYTZkZ/proceedings-famli2012.pdf">
-  <i>Proceedings of FAMLI</i> 2</a>, PAGENO--PAGENO.</li>
 <li>Emilie Destruel and Leah Velleman 2014. <a
   href="{% link publications/destruel-2014.pdf %}">"Refining
   contrast: Empirical evidence from the English it-cleft.</a> <i>Empirical Issues
@@ -69,11 +80,3 @@ University of Texas, Austin.</li>
   "The communicative significance of primary and secondary accents."</a>
   <i>Lingua</i> 121(11), 1671–1692.</li>
   </ul>
-
-## Poetry
-
-I published some poetry once upon a time. It's all succumbed to bit rot — one site now
-redirects to a Trump campaign video. Oh well. As of {{ page.path | file_date | date_to_string }}
-you can still read this one:
-
-<a href="http://crabfatmagazine.com/article/leah-velleman/">Interview</a> in <i>Crab Fat</i>, December, 2016.

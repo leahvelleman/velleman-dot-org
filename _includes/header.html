@@ -1,0 +1,63 @@
+<p>Coder, linguist, singer, occasional blogger.</p>
+<p>See <a href="{{ site.github.owner_url }}">my Github profile</a>
+     or <a href="/assets/velleman_resume.pdf">my résumé</a> and <a href="/resume.html">how I build it</a>.</p>
+  <nav aria-label="Primary Navigation">
+    <ul class="navlist">
+      <li 
+        {% if page.permalink == 'index.html' %} 
+          class='current' aria-current='page'
+        {% endif %}
+      >
+        <a href="{% link index.html %}">Posts</a>
+        {% if page.layout == 'post' %}
+          <span class='current' aria-current="true">
+            &raquo;
+            <a href="{{ page.permalink }}">
+              {{ page.title | truncate: 20 }}
+            </a>
+          </span>
+        {% endif %}
+      </li>
+
+      <li 
+        {% if page.permalink == 'projects.html' %} 
+          class='current' aria-current='page'
+        {% endif %}
+      >
+        <a href="{% link projects.html %}">Projects</a>
+        {% if page.layout == 'project' %}
+          <span class='current' aria-current="true">
+            &raquo;
+            <a href="{{ page.permalink }}">
+              {{ page.slug | replace: "-", " " | capitalize }}
+            </a>
+          </span>
+        {% endif %}
+      </li>
+
+      <li
+        {% if page.permalink == 'publications.html' %}
+          class='current' aria-current='true'
+        {% endif %} 
+      >
+        <a href="{% link publications.md %}">Publications</a>
+      </li>
+
+      <li
+        {% if page.permalink == 'elsewhere.html' %}
+          class='current' aria-current='true'
+        {% endif %} 
+      >
+        <a href="{% link elsewhere.md %}">Find me elsewhere</a>
+      </li>
+
+      <li
+        {% if page.permalink == 'mx.html' %}
+          class='current' aria-current='true'
+        {% endif %} 
+      >
+        <a href="{% link mx.md %}">Why I use Mx</a>
+      </li>
+      
+    </ul>
+  </nav>
