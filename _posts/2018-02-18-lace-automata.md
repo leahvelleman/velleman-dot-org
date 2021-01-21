@@ -8,18 +8,18 @@ Sometime around fifth grade I either invented or
 stole-and-then-forgot-about-stealing a kind of rule-based doodles that I
 later realized were cellular automata.
 
-**Update:** Wherever I got them from, it looks like they've been
-independently invented at least one other time. [Paige Gulley was
-posting art made with this style of automaton a few years
-ago.](https://then-there.tumblr.com/post/77739107796) She says she
-didn't learn about them anywhere, but came up with the idea herself, the
-same way I remember doing it: doodling while bored in class.
+> **Update:** Wherever I got them from, it looks like they've been
+> independently invented at least one other time. [Paige Gulley was
+> posting art made with this style of automaton a few years
+> ago.](https://then-there.tumblr.com/post/77739107796) She says she
+> didn't learn about them anywhere, but came up with the idea herself, the
+> same way I remember doing it: doodling while bored in class.
 
-<p><strike> I've looked for information about them since and not been able to
+<blockquote><strike> I've looked for information about them since and not been able to
 find any --- which makes me think either I did invent them, or else wherever
 I stole them from isn't very well-known. If I did did invent them, I'll call
 them "lace automata," because a lot of them form open, lacy patterns of
-crossing lines and cables.</strike></p>
+crossing lines and cables.</strike></blockquote>
 
 I've started playing around with them again recently, and trying to work
 out some of their properties. As cellular automata, they're similar to,
