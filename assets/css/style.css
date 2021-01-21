@@ -12,8 +12,6 @@ header { font-weight: bold; }
 .bottommeta { margin-top: 3rem; }
 .bottommeta .postlist { margin-bottom: 0; }
 header a, footer a { color: var(--nav-text); }
-header a.emph { margin: -3px; padding: 3px; color: var(--nav-emph-text); background-color: var(--nav-emph-background); } 
-header a.active { margin: -3px; padding: 3px; color: var(--nav-background); background-color: var(--nav-text); } 
 header a:hover, header a:focus { color: inherit; }
 
 /* For content only intended for screen reader users:
@@ -163,9 +161,12 @@ div.score img { width: auto; max-width: none; margin: 0; }
 
 @media print, screen and (max-width: 650px) { 
   div.music { overflow-x: auto; clear: both; width: auto; max-width: 33em; } 
-  header, .bottommeta { padding: 1em; }
+  div.wrapper { padding: 1em; }
+  header, footer { padding: 1em; }
   header { margin: -1em -1em 0em -1em; }
-  .bottommeta { margin: 2em -1em -1em -1em; }
+  footer { margin: 0em -1em -1em -1em; }
+  header a, footer a, header a.emph, header a.active { margin: 0; padding: 0; color: var(--reverse); background-color: var(--blue); }
+
 }
 
 @media print, screen and (max-width: 500px) {
