@@ -11,7 +11,7 @@ they can concentrate on readers.
 
 As an editor, I help writers say what they mean. Sure, I can check your grammar.
 But when you get down to it, grammar and style are just bags of tools. The real goal
-is clarity. I have a Ph.D. in clarity. 
+is clarity. [I have a Ph.D. in clarity.](/publications.html)
 
 My position on the Oxford comma is "Let's find out what your readers need."
 
