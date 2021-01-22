@@ -9,6 +9,8 @@ body { background-color: var(--background);
 div.wrapper { width: auto; padding: 1.5em; max-width: 33em; margin: 0px auto; }
 header, footer  { background-color: var(--nav-background); margin: 0; padding: 0 2rem 0 1rem; }
 header { font-weight: bold; }
+.lefthed { float: left; }
+.righthed { float: right; }
 .bottommeta { margin-top: 3rem; }
 .bottommeta .postlist { margin-bottom: 0; }
 header a, footer a { color: var(--nav-text); }
@@ -162,6 +164,8 @@ div.score img { width: auto; max-width: none; margin: 0; }
 @media print, screen and (max-width: 650px) { 
   div.music { overflow-x: auto; clear: both; width: auto; max-width: 33em; } 
   div.wrapper { padding: 1em; }
+  .lefthed { margin-right: 1em; }
+  .righthed { float: left; }
   header, footer { padding: 1em; }
   header { margin: -1em -1em 0em -1em; }
   footer { margin: 0em -1em -1em -1em; }
