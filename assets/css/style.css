@@ -8,13 +8,12 @@ body { background-color: var(--background);
   padding: 0;}
 div.wrapper { width: auto; padding: 1.5em; max-width: 33em; margin: 0px auto; }
 header, footer  { background-color: var(--nav-background); margin: 0; padding: 0 2rem 0 1rem; }
-header { font-weight: bold; }
-.lefthed { float: left; }
+footer img, img.icon { display: inline; margin: 0; height: 16px; color: white; padding: 0; top: .125em; position: relative; }
+.lefthed { float: left; font-weight: bold;}
 .righthed { float: right; }
 .bottommeta { margin-top: 3rem; }
 .bottommeta .postlist { margin-bottom: 0; }
 header a, footer a { color: var(--nav-text); }
-header a:hover, header a:focus { color: inherit; }
 
 /* For content only intended for screen reader users:
  * https://webaim.org/techniques/css/invisiblecontent/ */
@@ -151,7 +150,7 @@ div.score img { width: auto; max-width: none; margin: 0; }
         float:none;
         text-indent: 0;
         max-width: 30rem;
-        margin: 1.5rem 0 1.5rem 2rem; 
+        margin: 1.5rem 0; 
         position: relative;
   } 
 
@@ -169,7 +168,7 @@ div.score img { width: auto; max-width: none; margin: 0; }
   header, footer { padding: 1em; }
   header { margin: -1em -1em 0em -1em; }
   footer { margin: 0em -1em -1em -1em; }
-  header a, footer a, header a.emph, header a.active { margin: 0; padding: 0; color: var(--reverse); background-color: var(--blue); }
+  header a, footer a, header a.emph, header a.active { margin: 0; padding: 0; }
 
 }
 
