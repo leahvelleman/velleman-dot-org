@@ -1,7 +1,7 @@
 ---
 layout: default
 title: I make documentation better.
-permalink: /about/
+permalink: /index.html
 ---
 <h1>I make documentation better.</h1>
 
