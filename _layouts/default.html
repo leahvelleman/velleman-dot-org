@@ -48,11 +48,11 @@
       <header>
         <span class="lefthed"><a href="/">Leah Velleman</a></span>
         <span class="righthed">
-          <a href="/index.html" class="{% if page.url == '/index.html' %}active{% endif %}">Blog</a> 
+          <a href="/blog.html">Blog</a> 
           &nbsp; 
-          <a href="/publications.html" class="{% if page.url == '/publications.html' %}active{% endif %}">Linguistics</a>
+          <a href="/publications.html">Linguistics</a>
           &nbsp; 
-          <a href="/about/" class="{% if page.url == '/about/' %}active{% endif %} emph">Hire me!</a> 
+          <a href="/index.html">Hire me!</a> 
         </span>
       <div style="clear: both;"></div>
       </header>
@@ -61,7 +61,10 @@
         {{ content }}
       </main>
       <footer>
-        <a href="https://github.com/leahvelleman">Github</a> &nbsp; <a href="https://twitter.com/leahvelleman">Twitter</a> &nbsp; <a href="mailto:leahvelleman@gmail.com">Email</a> &nbsp; <a href="/assets/velleman_resume.pdf">Résumé</a> &nbsp; <a href="/feed.xml">Subscribe</a>
+        <a href="/feed.xml"><img height="20px" src="/assets/feed.svg"/></a>
+        <a href="https://github.com/leahvelleman"><img height="20px" src="/assets/octocat.svg"/></a>
+        <a href="https://www.linkedin.com/in/leah-velleman-b07b294a/"><img height="20px" src="/assets/linkedin.svg"/></a>
+        <a href="mailto:leahvelleman@gmail.com"><img height="20px" src="/assets/email.svg"/></a>
       </footer>
     </div>
   </body>
